@@ -1,0 +1,20 @@
+@charset "gb2312";
+*{margin:0;padding:0;font-size:100%;color:#333;font-family:"Microsoft Yahei","simsun","MingLiu";font-weight:normal;}
+*:focus{outline:none;-moz-outline:none;}
+html,img{border:0}
+body{background-color:#fff;height:100%;width:100%;margin:0 auto;max-width:480px;min-width:300px;overflow-x:hidden;}
+ul,ol{list-style:none;}
+fieldset,img,abbr,acronym{border:none}
+a img{border:none}
+a{color:#333;text-decoration:none;border:0;cursor:pointer;}
+a:hover{color:#000;text-decoration:none;border:0;}
+.fl{float:left}
+.fr{float:right}
+.clear{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;width:0;}
+
+.frames{width: 100%;max-width:480px;min-width:300px;overflow: hidden;}
+.warmp{width: 100%;max-width:480px;min-width:300px;}
+/*wrap,bg*/
+.wrap,.bg{width:100%;max-width:480px;min-width:300px;}
+.wrap{position:relative;}
+.bg{vertical-align:top}
