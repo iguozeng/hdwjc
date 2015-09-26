@@ -34,6 +34,8 @@ if($nocache) {
 ob_start();
 define('YXS', substr(dirname(__FILE__), 0, -7));
 define('SYS', 'e:/wwwroot/main/cms/');
+define('SYS', 'D:/wwwroot/hdwjc.com/cms.hdwjc.com/');
+
 @set_magic_quotes_runtime(0); 
 $magic_quotes_gpc = get_magic_quotes_gpc();
 extract(daddslashes($_POST,1));
@@ -45,9 +47,9 @@ global $Global;
 $page_url = $_SERVER['PHP_SELF'] ? $_SERVER['PHP_SELF'] : $_SERVER['SCRIPT_NAME'];
 define('PHP_NEXTLINE', (PHP_OS == 'WINNT')?"\r\n":"\n");
 define("mysql_HOST","localhost");
-define("mysql_USERNAME","hdgsg_user");
+define("mysql_USERNAME","hdwjc_user");
 define("mysql_PASSWORD","5220400");
-define("mysql_DATABASE","hdgsg");
+define("mysql_DATABASE","hdwjc_data");
 require_once SYS.'include/config.php';
 require_once SYS.'include/var.php';
 require_once SYS.'include/class_lib/class.cache.php';
