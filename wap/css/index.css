@@ -1,2 +1,7 @@
 @charset "gb2312";
-/* CSS Document */
+/*focus*/
+.focus{ max-width:480px; position:relative; overflow:hidden;}
+.focus .bd{ position:relative; z-index:0;}
+.focus .bd li img{ width:100%;vertical-align:top;}
+/*slogan*/
+.slogan{}

@@ -7,11 +7,35 @@
 		<title>华东五金网</title>
 		<link href="css/global.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/TouchSlide.1.1.js"></script>
 	</head>
 	<body>
 		<div class="header">
 			
 		</div>
-		<script src="js/jquery-1.8.3.min.js"></script>
+		<div class="wrapper">
+			<img class="bg" src="images/index_01.jpg" />
+			<div class="txt_wrapper slogan">
+				<span class="txt">五金机电建材供应基地&nbsp;38630家企业10年专注采购</span>
+			</div>
+		</div>
+		<div id="focus" class="focus">
+			<div class="bd">
+				<ul>
+					<li><img src="images/banner_01.jpg" /></li>
+					<li><img src="images/banner_01.jpg" /></li>
+					<li><img src="images/banner_01.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			TouchSlide({ 
+				slideCell:"#focus",
+				mainCell:".bd ul", 
+				effect:"leftLoop", 
+				autoPlay:true,
+			});
+		</script>
 	</body>
 </html>

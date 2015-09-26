@@ -1,5 +1,5 @@
 @charset "gb2312";
-*{margin:0;padding:0;font-size:100%;color:#333;font-family:"Microsoft Yahei","simsun","MingLiu";font-weight:normal;}
+*{margin:0;padding:0;font-size:12px;color:#333;font-family:"Microsoft Yahei","simsun","MingLiu";font-weight:normal;}
 *:focus{outline:none;-moz-outline:none;}
 html,img{border:0}
 body{background-color:#fff;height:100%;width:100%;margin:0 auto;max-width:480px;min-width:300px;overflow-x:hidden;}
@@ -11,10 +11,63 @@ a:hover{color:#000;text-decoration:none;border:0;}
 .fl{float:left}
 .fr{float:right}
 .clear{visibility:hidden;display:block;font-size:0;content: ".";clear:both;height:0;width:0;}
-
-.frames{width: 100%;max-width:480px;min-width:300px;overflow: hidden;}
-.warmp{width: 100%;max-width:480px;min-width:300px;}
-/*wrap,bg*/
-.wrap,.bg{width:100%;max-width:480px;min-width:300px;}
-.wrap{position:relative;}
+/*wrapper,bg*/
+.wrapper,.bg{width:100%;}
+.wrapper{position:relative;}
 .bg{vertical-align:top}
+/*txt◊‘  ”¶*/
+.txt_wrapper span{display:block;}
+.txt_wrapper strong{color:#FF6600;}
+.txt_wrapper b{font-weight:bold;}
+.txt_wrapper em{color:#913001;font-style:normal;font-weight:bold;}
+.txt_wrapper .txtXXL{font-weight:bold;}
+.txt_wrapper .colorFF6600{color:#FF6600;}
+.txt_wrapper .colorFFF{color:#FFF;}
+@media screen and (min-width:300px) {
+	.txt_wrapper .txt{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtL{font-size:12px;line-height:22px;}
+	.txt_wrapper .txtXL{font-size:16px;line-height:30px;}
+	.txt_wrapper .txtXXL{font-size:22px;line-height:42px;}
+	.txt_wrapper .txtS{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+}
+@media screen and (min-width:320px) {
+	.txt_wrapper .txt{font-size:12px;line-height:22px;}
+	.txt_wrapper .txtL{font-size:14px;line-height:26px;}
+	.txt_wrapper .txtXL{font-size:18px;line-height:34px;}
+	.txt_wrapper .txtXXL{font-size:24px;line-height:46px;}
+	.txt_wrapper .txtS{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+}
+@media screen and (min-width:350px) {
+	.txt_wrapper .txt{font-size:14px;line-height:26px;}
+	.txt_wrapper .txtL{font-size:16px;line-height:30px;}
+	.txt_wrapper .txtXL{font-size:20px;line-height:38px;}
+	.txt_wrapper .txtXXL{font-size:26px;line-height:50px;}
+	.txt_wrapper .txtS{font-size:12px;line-height:22px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+}
+@media screen and (min-width:390px) {
+	.txt_wrapper .txt{font-size:16px;line-height:30px;}
+	.txt_wrapper .txtL{font-size:18px;line-height:34px;}
+	.txt_wrapper .txtXL{font-size:22px;line-height:42px;}
+	.txt_wrapper .txtXXL{font-size:28px;line-height:54px;}
+	.txt_wrapper .txtS{font-size:14px;line-height:26px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+}
+@media screen and (min-width:430px) {
+	.txt_wrapper .txt{font-size:18px;line-height:34px;}
+	.txt_wrapper .txtL{font-size:20px;line-height:38px;}
+	.txt_wrapper .txtXL{font-size:24px;line-height:46px;}
+	.txt_wrapper .txtXXL{font-size:30px;line-height:58px;}
+	.txt_wrapper .txtS{font-size:16px;line-height:30px;}
+	.txt_wrapper .txtXS{font-size:12px;line-height:20px;}
+}
+@media screen and (min-width:480px) {
+	.txt_wrapper .txt{font-size:20px;line-height:38px;}
+	.txt_wrapper .txtL{font-size:22px;line-height:42px;}
+	.txt_wrapper .txtXL{font-size:26px;line-height:50px;}
+	.txt_wrapper .txtXXL{font-size:32px;line-height:62px;}
+	.txt_wrapper .txtS{font-size:18px;line-height:34px;}
+	.txt_wrapper .txtXS{font-size:14px;line-height:22px;}
+}
