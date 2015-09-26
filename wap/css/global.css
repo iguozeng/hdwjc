@@ -17,51 +17,53 @@ a:hover{color:#000;text-decoration:none;border:0;}
 .bg{vertical-align:top}
 /*txt◊‘  ”¶*/
 .txt_wrapper span{display:block;}
+.txt_wrapper .txt_inline{display:inline}
 .txt_wrapper strong{color:#FF6600;}
 .txt_wrapper b{font-weight:bold;}
 .txt_wrapper em{color:#913001;font-style:normal;font-weight:bold;}
 .txt_wrapper .txtXXL{font-weight:bold;}
 .txt_wrapper .colorFF6600{color:#FF6600;}
 .txt_wrapper .colorFFF{color:#FFF;}
+.txt_wrapper .colorB9B4B5{color:#B9B4B5;}
 @media screen and (min-width:300px) {
 	.txt_wrapper .txt{font-size:10px;line-height:18px;}
 	.txt_wrapper .txtL{font-size:12px;line-height:22px;}
 	.txt_wrapper .txtXL{font-size:16px;line-height:30px;}
 	.txt_wrapper .txtXXL{font-size:22px;line-height:42px;}
-	.txt_wrapper .txtS{font-size:10px;line-height:18px;}
-	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtS{font-size:10px;line-height:16px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:16px;}
 }
 @media screen and (min-width:320px) {
 	.txt_wrapper .txt{font-size:12px;line-height:22px;}
 	.txt_wrapper .txtL{font-size:14px;line-height:26px;}
 	.txt_wrapper .txtXL{font-size:18px;line-height:34px;}
 	.txt_wrapper .txtXXL{font-size:24px;line-height:46px;}
-	.txt_wrapper .txtS{font-size:10px;line-height:18px;}
-	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtS{font-size:10px;line-height:16px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:16px;}
 }
 @media screen and (min-width:350px) {
 	.txt_wrapper .txt{font-size:14px;line-height:26px;}
 	.txt_wrapper .txtL{font-size:16px;line-height:30px;}
 	.txt_wrapper .txtXL{font-size:20px;line-height:38px;}
 	.txt_wrapper .txtXXL{font-size:26px;line-height:50px;}
-	.txt_wrapper .txtS{font-size:12px;line-height:22px;}
-	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtS{font-size:12px;line-height:18px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:16px;}
 }
 @media screen and (min-width:390px) {
 	.txt_wrapper .txt{font-size:16px;line-height:30px;}
 	.txt_wrapper .txtL{font-size:18px;line-height:34px;}
 	.txt_wrapper .txtXL{font-size:22px;line-height:42px;}
 	.txt_wrapper .txtXXL{font-size:28px;line-height:54px;}
-	.txt_wrapper .txtS{font-size:14px;line-height:26px;}
-	.txt_wrapper .txtXS{font-size:10px;line-height:18px;}
+	.txt_wrapper .txtS{font-size:14px;line-height:22px;}
+	.txt_wrapper .txtXS{font-size:10px;line-height:16px;}
 }
 @media screen and (min-width:430px) {
 	.txt_wrapper .txt{font-size:18px;line-height:34px;}
 	.txt_wrapper .txtL{font-size:20px;line-height:38px;}
 	.txt_wrapper .txtXL{font-size:24px;line-height:46px;}
 	.txt_wrapper .txtXXL{font-size:30px;line-height:58px;}
-	.txt_wrapper .txtS{font-size:16px;line-height:30px;}
-	.txt_wrapper .txtXS{font-size:12px;line-height:20px;}
+	.txt_wrapper .txtS{font-size:16px;line-height:26px;}
+	.txt_wrapper .txtXS{font-size:12px;line-height:18px;}
 }
 @media screen and (min-width:480px) {
 	.txt_wrapper .txt{font-size:20px;line-height:38px;}

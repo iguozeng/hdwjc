@@ -1,7 +1,36 @@
 @charset "gb2312";
-/*focus*/
-.focus{ max-width:480px; position:relative; overflow:hidden;}
-.focus .bd{ position:relative; z-index:0;}
-.focus .bd li img{ width:100%;vertical-align:top;}
 /*slogan*/
-.slogan{}
+.slogan{position:absolute;left:0;top:0;width:100%;text-align:center;}
+/*focus*/
+.focus{max-width:480px;position:relative;overflow:hidden;}
+.focus .bd{position:relative;z-index:0;}
+.focus .bd li img{width:100%;vertical-align:top;}
+/*cate_nav_01*/
+.cate_nav_01 ul{padding:2.5%;width:95%;}
+.cate_nav_01 li{width:18%;padding:1%;float:left;}
+.cate_nav_01 a{width:100%;}
+.cate_nav_01 img{width:90%;margin:0 auto;display:block;}
+.cate_nav_01 span{width:100%;margin:0 auto;text-align:center;display:block;line-height:22px;font-weight:bold;}
+/*index_title*/
+.index_title{position:absolute;left:5%;top:0;width:90%;}
+.index_title a{padding-top:2%;}
+/*cate_nav_02*/
+.cate_nav_02{}
+.cate_nav_02 ul{margin:2%;width:95%;border:1px solid #C1C1C1;}
+.cate_nav_02 li{width:18%;padding:0.8%;float:left;border-right:1px solid #C1C1C1;}
+.cate_nav_02 li.last{border-right:none;}
+.cate_nav_02 a{width:100%;}
+.cate_nav_02 span{display:block;line-height:22px;font-weight:bold;}
+.cate_nav_02 img{width:98%;margin:0 auto;display:block;}
+/*ads*/
+.ads_01_wrapper{padding-bottom:2%;}
+.ads_01{position:absolute;left:5%;top:8%;}
+.ads_01 b{color:#000e2f;display:block;}
+.ads_02_wrapper{padding-bottom:2%;}
+.ads_02{position:absolute;left:15%;top:20%;}
+.ads_02 b{display:block;}
+/*six_advantages*/
+.six_advantages{width:84%;padding:2% 8%;}
+.six_advantages strong{color:#2659d1;font-size:16px;line-height:30px;font-weight:bold;}
+.six_advantages em{color:#2659d1;font-size:20px;line-height:30px;font-weight:bold;font-style:normal;}
+.six_advantages span{color:#2659d1;font-size:14px;line-height:18px;font-weight:bold;display:block;}
