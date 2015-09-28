@@ -29,8 +29,25 @@
 .ads_02_wrapper{padding-bottom:2%;}
 .ads_02{position:absolute;left:15%;top:20%;}
 .ads_02 b{display:block;}
-/*six_advantages*/
+/*特惠商品*/
+.tehui{}
+.tehui ul{margin:2%;width:96%;}
+.tehui li{border:1px solid #848484;border-radius:8px 8px 0 0;width:32%;margin-right:1%;margin-bottom:1%;}
+.tehui .tehui_img{width:95%;margin:0 auto;text-align:center;}
+.tehui .tehui_img img{width:95%;}
+.tehui h4{width:96%;margin-left:2%;line-height:20px;height:20px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.tehui .tehui_price{}
+.tehui .tehui_price img{}
+.tehui .tehui_price label{}
+/*六大优势*/
 .six_advantages{width:84%;padding:2% 8%;}
 .six_advantages strong{color:#2659d1;font-size:16px;line-height:30px;font-weight:bold;}
 .six_advantages em{color:#2659d1;font-size:20px;line-height:30px;font-weight:bold;font-style:normal;}
 .six_advantages span{color:#2659d1;font-size:14px;line-height:18px;font-weight:bold;display:block;}
+.advantages ul{margin:2%;width:96%;}
+.advantages li{background:#EBEBEB;margin-bottom:2%;width:100%;clear:both;height:auto;}
+.advantages img{width:18%;display:block;}
+.advantages .advantages_right{padding:0 2%;width:78%;display:block;}
+.advantages .advantages_title{font-weight:bold;display:block;line-height:24px;}
+.advantages .txt_r{text-align:right;}
+.advantages .advantages_content{line-height:18px;text-indent:2em;}
