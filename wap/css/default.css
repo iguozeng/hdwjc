@@ -1,15 +1,18 @@
 /* CSS Document */
 .wrapper{ min-width:320px; max-width:480px; position:relative; margin:0 auto;}
-.ui_header{width: 100%;height: 55px;line-height: 55px;z-index: 99999;position: fixed;left: 0;top: 0;right: 0; background:#F9F9F9; border-bottom:solid 1px #D6D6D6;}
+.ui_header{width: 100%;height: 55px;line-height: 55px;z-index: 99999;position: fixed;left: 0;top: 0;right: 0; background:#F9F9F9; border-bottom:solid 1px #D6D6D6; overflow:hidden;}
 .pre{position: absolute;top: 0px;left: 15px;display: block;width: 55px;height: 52px; background:url(../images/pre.png) no-repeat center center;background-size:35px 35px;}
+.refresh{position: absolute;top: 0px;left: 60px;display: block;width: 55px;height: 52px; background:url(../images/refresh.png) no-repeat center center;background-size:35px 35px;}
 .ui_header span{ display:block; margin:0 auto; height:55px; line-height:55px; width:120px; text-align:center; font-size:18px; font-weight:bold;}
 .ui_header .search{ position:absolute; top:0; right:55px; width:55px;height:52px; background:url(../images/search.png) no-repeat center center;background-size:35px 35px;}
 .ui_header .person{ position:absolute; top:0; right:10px; width:55px;height:52px; background:url(../images/person.png) no-repeat center center;background-size:35px 35px;}
-.loginform{ clear:both; height:300px; padding-top:80px;}
+.loginform{ clear:both; padding-top:60px;}
 .loginform span{width:90%; height:30px; margin:0 auto; display:block; font-size:1.5em; margin-top:10px;}
 .typein{ height:40px; width:90%; margin:0 auto; border:solid 1px #999; position:relative;}
 .typein img{ position:absolute; left:2px; top:6%; height:80%; }
-.loginform input{ position:absolute; left:45px; top:1px; width:80%; height:36px; line-height:36px; overflow:hidden; border:0;}
+.loginform input[type="text"]{ position:absolute; left:45px; top:1px; width:80%; height:36px; line-height:36px; overflow:hidden; border:0;}
+.loginform input[type="submit"]{ clear:both; width:100%; height:35px; line-height:35px; border:0; background:#06F; border-radius:5px;
+font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 
 .ui_footer{ width:100%;position: fixed; left:0; bottom:0; height:55px; background:#2659D1;}
 .telephone{ width:20%; position:absolute; margin:0 auto; left:0; right:0; bottom:-40px; background:#FFF;border-radius: 50%; border:solid 1px #CCCCCC;}
@@ -22,3 +25,10 @@
 .ui_right a{ width:49%; height:55px; display:block; float:left;}
 .ui_right a img{ display:block; height:32px; width: auto; margin:0 auto; margin-top:3%;}
 .ui_right a span{ display:block; color:#FFF; height:23px; line-height:23px; font-weight:bold; text-align:center; font-size:1em;}
+
+.a_reg{ margin-top:20px;}
+.a_link{ background:#F0EFEF; padding-top:35px; padding-bottom:100px;}
+.link_main{ height:60px; padding-left:3%;}
+.link_main a{ display:block; float:left; width:20%; height:30px; line-height:30px; text-align:center; margin:15px 2% 0 2%; background:#224DCC; border-radius:5px; font-weight:bold; color:#FFF;}
+.link_main a.selected{ background:#008DFE;}
+.sepeteor{ clear:both; width:100%; height:6px; background:#D9D9D9;}
