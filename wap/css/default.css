@@ -5,7 +5,20 @@
 .ui_header span{ display:block; margin:0 auto; height:55px; line-height:55px; width:120px; text-align:center; font-size:18px; font-weight:bold;}
 .ui_header .search{ position:absolute; top:0; right:55px; width:55px;height:52px; background:url(../images/search.png) no-repeat center center;background-size:35px 35px;}
 .ui_header .person{ position:absolute; top:0; right:10px; width:55px;height:52px; background:url(../images/person.png) no-repeat center center;background-size:35px 35px;}
-.loginform{ height:300px;}
-.ui_footer{ width:100%;position: fixed; left:0; bottom:0; height:65px; line-height:65px; background:#2659D1;}
+.loginform{ clear:both; height:300px; padding-top:80px;}
+.loginform span{width:90%; height:30px; margin:0 auto; display:block; font-size:1.5em; margin-top:10px;}
+.typein{ height:40px; width:90%; margin:0 auto; border:solid 1px #999; position:relative;}
+.typein img{ position:absolute; left:2px; top:6%; height:80%; }
+.loginform input{ position:absolute; left:45px; top:1px; width:80%; height:36px; line-height:36px; overflow:hidden; border:0;}
+
+.ui_footer{ width:100%;position: fixed; left:0; bottom:0; height:55px; background:#2659D1;}
 .telephone{ width:20%; position:absolute; margin:0 auto; left:0; right:0; bottom:-40px; background:#FFF;border-radius: 50%; border:solid 1px #CCCCCC;}
 .telephone img{ display:block; width:100%;}
+.ui_left{ width:40%; position:absolute; left:0; top:0; height:55px; text-align:center;}
+.ui_left a{ width:49%; height:55px; display:block; float:left;}
+.ui_left a img{ display:block; height:32px; width: auto; margin:0 auto; margin-top:3%;}
+.ui_left a span{ display:block; color:#FFF; height:23px; line-height:23px; font-weight:bold; text-align:center; font-size:1em;}
+.ui_right{ width:40%; position:absolute; right:0; top:0; height:55px; text-align:center;}
+.ui_right a{ width:49%; height:55px; display:block; float:left;}
+.ui_right a img{ display:block; height:32px; width: auto; margin:0 auto; margin-top:3%;}
+.ui_right a span{ display:block; color:#FFF; height:23px; line-height:23px; font-weight:bold; text-align:center; font-size:1em;}
