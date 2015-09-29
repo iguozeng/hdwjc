@@ -9,17 +9,7 @@
 <link href="css/default.css" rel="stylesheet">
 </head>
 <body>
-<div class="ui_header" style="position:relative;">
-	<img class="bg" src="images/f_heder.jpg">
-    <div class="wrapper" style="left:0; top:0; position:absolute;">
-        <a href="" class="pre"></a>
-        <a href="#" class="refresh"></a>
-        <span>登录系统</span>
-        <a href="" class="search"></a>
-        <a href="" class="person"></a>
-    </div>
-
-</div>
+<?php require_once 'p.header.php';?>
 <div class="wrapper loginform">
 <form action="" method="post">
 	<span>用户名：</span>
@@ -51,33 +41,7 @@
     </div>
     <div class="sepeteor"></div>
 </div>
-<div class="ui_footer">
-	<div class="wrapper">
-    	<div class="telephone">
-        	<a href=""><img src="images/telephone.png"></a>
-        </div>
-        <div class="ui_left">
-        	<a href="">
-            	<img src="images/footer_home.png">
-                <span>首页</span>
-            </a>
-            <a href="">
-            	<img src="images/footer_qq.png">
-                <span>QQ咨询</span>
-            </a>
-        </div>
-        <div class="ui_right">
-        	<a href="">
-            	<img src="images/footer_address.png">
-                <span>公司地址</span>
-            </a>
-            <a href="">
-            	<img src="images/footer_shoppingCart.png">
-                <span>购物车</span>
-            </a>
-        </div>
-    </div>
-</div>
+<?php require_once 'p.footer.php';?>
 
 </body>
 </html>
