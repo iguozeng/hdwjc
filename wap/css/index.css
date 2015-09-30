@@ -30,7 +30,6 @@
 .ads_02{position:absolute;left:15%;top:20%;}
 .ads_02 b{display:block;}
 /*特惠商品*/
-.tehui{}
 .tehui ul{margin:2%;width:96%;}
 .tehui li{border:1px solid #848484;border-radius:8px 8px 0 0;width:32%;margin-right:0.9%;margin-bottom:2%;}
 .tehui .tehui_goods{width:95%;margin:0 auto;padding-top:5%;display:block;}
@@ -40,6 +39,19 @@
 .tehui_purchase img{width:100%;}
 .tehui_purchase .tehui_price{position:absolute;left:10%;top:0;color:#fff;}
 .tehui_purchase .tehui_btn{position:absolute;right:1%;bottom:1%;color:#fff;}
+/*推荐商品*/
+.tuijian{}
+.tuijian ul{margin:2% 0;width:96%;}
+.tuijian li{margin-left:2%;width:47%;}
+.tuijian .tuijian_pic{position:absolute;left:0;bottom:0;width:50%;padding-bottom:5%;}
+.tuijian .tuijian_pic img{width:85%;margin:0 auto;display:block;}
+.tuijian .tuijian_name{position:absolute;right:5%;top:5%;width:46%;text-align:left;height:40px;overflow:hidden;}
+.tuijian .tuijian_name a{line-height:20px;height:40px;width:100%;overflow:hidden;color:#000;font-weight:bold;}
+.tuijian .tuijian_price{position:absolute;right:5%;top:45%;}
+.tuijian .tuijian_price label{color:#ff0000;}
+.tuijian .tuijian_btn{position:absolute;right:5%;bottom:5%;width:30%;}
+.tuijian .tuijian_btn a{}
+.tuijian .tuijian_btn img{width:100%;}
 /*六大优势*/
 .six_advantages{width:84%;padding:2% 8%;}
 .six_advantages strong{color:#2659d1;font-size:16px;line-height:30px;font-weight:bold;}
