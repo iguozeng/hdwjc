@@ -1,4 +1,4 @@
-/* CSS Document */
+/* 登录 注册 */
 .wrapper{ min-width:320px; max-width:480px; position:relative; margin:0 auto;}
 .ui_header{width: 100%;height:45px;line-height: 45px;z-index: 99999;position: fixed;left: 0;top: 0;right: 0; background:#F9F9F9; border-bottom:solid 1px #D6D6D6; overflow:hidden;}
 .pre{position: absolute;top: 0px;left:5px;display: block;width: 45px;height: 45px; background:url(../images/pre.png) no-repeat center center;background-size:35px 35px;}
@@ -15,7 +15,7 @@
 .loginform input[type="submit"]{ clear:both; width:100%; height:35px; line-height:35px; border:0; background:#06F; border-radius:5px;
 font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 
-.ui_footer{ width:100%;position: fixed; left:0; bottom:0; height:55px; background:#2659D1;}
+.ui_footer{ clear:both;width:100%;position: fixed; left:0; bottom:0; height:55px; background:#2659D1;}
 .telephone{ width:20%; position:absolute; margin:0 auto; left:0; right:0; bottom:-40px; background:#FFF;border-radius: 50%; border:solid 1px #CCCCCC;}
 .telephone img{ display:block; width:100%;}
 .ui_left{ width:40%; position:absolute; left:0; top:0; height:55px; text-align:center;}
@@ -53,3 +53,22 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 
 .shift{ background:#F0EFEF; min-height:200px;}
 .shift a{ display:block; height:30px; width:38%; line-height:30px; text-align:center; margin:0 auto; border:solid 1px #A4A3A3; border-radius:3px; font-size:1.2em; color:#2659D1; font-weight:bold;}
+
+/* 购物车 */
+.cart_array{clear: both; display:block; margin-top:60px; background:#EBEBEB; border-top: solid 1px #ECECEC; min-height:550px;}
+.cart_array li{ background:#FFF; border-bottom:solid 1px #ECECEC; height:100px; padding-top:10px; padding-left:15px; position:relative;}
+.cart_array li label{ display:block; width:90px; height:90px; overflow: hidden;position:relative; border-radius:12px;}
+.cart_array li label img{ display:block; height:90px; width:auto; margin:0 auto;}
+.cart_array li .cart_list{ position:absolute; padding-top:10px; top:0; left:115px; width:60%;}
+.cart_array li div strong{ display:block; height:24px; line-height:24px; overflow:hidden; font-size:1.3em; color:#000;}
+.cart_array li div span{display:block; height:18px; line-height:18px; overflow:hidden; font-size:1em; color:#333;}
+.cart_array li div h4{ display:block; height:16px; line-height:16px; overflow:hidden; font-size:0.8em; color:#CCC;}
+.modified{ clear:both; display:block;}
+.modified .input_btn{ height:30px; width:30px; background:#FFF; border:solid 1px #eee;}
+.modified .input_text{ height:30px; width:35px; background:#FFF; border:solid 1px #eee; line-height:30px; text-align:center;}
+.cart_array li .off{ display:block;width:25px; height:25px; line-height:25px; text-align:center; color:#F00; border: solid 1px #eee; border-radius:50px;
+ position:absolute; right:10px; top:10px; font-weight:bold; font-style:normal; font-size:16px;}
+.cart_array li .price{ display:block; width:120px; height:25px; line-height:25px; position:absolute; right:10px; bottom:15px; text-align:right; font-style:normal; font-size:1.2em; font-weight:bold;}
+.action_buy{ position: fixed; height:55px; width:100%; bottom:55px; background:#F5F5F5; min-width:320px; max-width:480px;}
+.buy_button{ display:block; float:left; background:url(../images/buy_button.png) no-repeat; width:110px; height:35px; background-size:110px 35px; color:#FFF; font-weight:bold; font-size:1.2em; line-height:35px; text-align:center; margin-top:10px; margin-left:5%; border:0;}
+.action_buy span{ display:block; float:right; text-align:left;width:40%;; height:55px; line-height:55px; color:#F00; font-size:1.2em; font-weight:bold;}
