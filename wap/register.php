@@ -1,3 +1,6 @@
+<?php
+$page_name='ÓÃ»§×¢²á';
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>

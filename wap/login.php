@@ -174,6 +174,8 @@ if($action=='new')
 	$Title='登录系统';
 }
 $global->HeaderTitle=$Title;
+
+$page_name='用户登录';
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">

@@ -4,7 +4,7 @@
     <div class="wrapper" style="left:0; top:0; position:absolute;">
         <a href="" class="pre"></a>
         <a href="#" class="refresh"></a>
-        <span>µÇÂ¼ÏµÍ³</span>
+        <span><?php echo $page_name; ?></span>
         <a href="" class="search"></a>
         <a href="" class="person"></a>
     </div>
