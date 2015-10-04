@@ -207,9 +207,11 @@ $global->HeaderTitle=$Title;
 </div>
 <div class="a_reg">
 	<img class="bg" src="images/login_01.jpg">
-    <a href=""><img class="bg" src="images/login_02.jpg"></a>
 </div>
-<div class="a_link">
+<div class="shift">
+	<a href="register.php">注册新的登录账户</a>
+</div>
+<div class="a_link" style="display:none;">
 	<div class="sepeteor"></div>
     <div class="link_main">
     	<a href="">关于我们</a>
@@ -219,6 +221,7 @@ $global->HeaderTitle=$Title;
     </div>
     <div class="sepeteor"></div>
 </div>
+
 <?php require_once 'p.footer.php';?>
 
 </body>
