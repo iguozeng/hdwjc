@@ -68,15 +68,35 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .modified .input_text{ height:30px; width:35px; background:#FFF; border:solid 1px #eee; line-height:30px; text-align:center;}
 .cart_array li .off{ display:block;width:25px; height:25px; line-height:25px; text-align:center; color:#F00; border: solid 1px #eee; border-radius:50px;
  position:absolute; right:10px; top:10px; font-weight:bold; font-style:normal; font-size:16px;}
-.cart_array li .price{ display:block; width:120px; height:25px; line-height:25px; position:absolute; right:10px; bottom:15px; text-align:right; font-style:normal; font-size:1.2em; font-weight:bold;}
+.cart_array li .price{ display:block; width:120px; height:25px; line-height:25px; position:absolute; right:10px; bottom:15px; text-align:right; font-style:normal; font-size:1.2em; font-weight:bold; color:#F00;}
 .action_buy{ position: fixed; height:55px; width:100%; bottom:55px; background:#F5F5F5; min-width:320px; max-width:480px;}
 .buy_button{ display:block; float:left; background:url(../images/buy_button.png) no-repeat; width:110px; height:35px; background-size:110px 35px; color:#FFF; font-weight:bold; font-size:1.2em; line-height:35px; text-align:center; margin-top:10px; margin-left:5%; border:0;}
 .action_buy span{ display:block; float:right; text-align:left;width:40%;; height:55px; line-height:55px; color:#F00; font-size:1.2em; font-weight:bold;}
 
-/* 订单 */
+/* 用户订单 */
 .address_array{ padding-top:45px;}
 .address_array dl dt{ display:block; overflow:hidden; height:40px; line-height:40px; background:#eee; border-left:solid 4px #2658D1; padding-left:18px; font-size:1.3em;}
 .address_array ul li{clear: both;display: block;position: relative;width: 90%;overflow: hidden;height: 40px;margin: 0 auto;border-bottom: #ddd solid 1px;}
 .address_array ul li p{display: block;width: 70px;overflow: hidden;font-size: 14px;height: 40px;line-height: 40px;}
 .address_array ul li span{position: absolute;overflow: hidden;display: block;width: 100%;height: 40px;line-height: 40px;font-size: 14px;margin-left: 70px;left: 0;top: 0;z-index: 98;}
 .address_array ul li span input {display: block;width: 100%;border: none;height: 30px;font-size: 14px;margin-top: 5px;}
+
+/* 订单查询 */
+.orders_statu{clear:both;display:block; padding-top:45px;}
+.orders_statu li{width:33%;height:40px; line-height:40px;float:left; }
+.orders_statu li a{display:block;border-bottom:#ddd solid 2px;text-align:center;height:40px;line-height:40px;font-size:16px;}
+.orders_statu li a.selected{border-bottom:#2B5DD2 solid 2px;}
+.array_title{ clear:both; padding:0 5% 0 5%; margin:0 auto; display:block; height:35px; line-height:35px; background:#FBFBFB; border-bottom:solid 1px #EBEBEB; }
+.orders_list{clear:both;min-height:400px; background:#EBEBEB; padding-bottom:110px;}
+.orders_list li{ background:#FFF; border-bottom:solid 1px #EBEBEB;}
+.array_title span{ width:70%; display:block; float:left;font-size:1.3em; color:#aaa;}
+.array_title a{ width:30%; display:block; float:right; text-align:right;font-size:1.3em; color:#aaa;}
+.array_column{ clear:both;padding:0 5% 0 5%;}
+.array_column strong{clear:both; display:block;height:30px; line-height:30px; }
+.array_column strong span{ display:block; float:left;font-size:1.2em;}
+.array_column strong label{ display:block; float:right;font-size:1.2em;}
+.array_column strong label em{ color:#F00; font-style:normal;font-size:1em;}
+.status{ clear:both;display:block;height:30px; line-height:30px;color:#aaa;font-size:1.2em;}
+.array_pic{ clear:both; overflow:hidden;}
+.array_pic a{ display:block; float:left; width:18%;padding:1%; text-align:center; border-radius:15px;}
+.array_pic a img{ width:100%; margin:0 auto;border-radius:15px; }

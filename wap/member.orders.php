@@ -79,7 +79,10 @@ $page_name='订单结算';
 
     </ul>
 </div>
-<?php require_once 'p.settle.account.php';?>
+<div class="action_buy">
+	<input type="button" class="buy_button" value="结 算">
+    <span>合计金额：&yen; 213.00</span>
+</div>
 </form>
 <?php require_once 'p.footer.php';?>
 </body>
