@@ -15,7 +15,6 @@
 .index_title{position:absolute;left:5%;top:0;width:90%;}
 .index_title a{padding-top:2%;}
 /*cate_nav_02*/
-.cate_nav_02{}
 .cate_nav_02 ul{margin:2%;width:95%;border:1px solid #C1C1C1;}
 .cate_nav_02 li{width:18%;padding:0.8%;float:left;border-right:1px solid #C1C1C1;}
 .cate_nav_02 li.last{border-right:none;}
@@ -28,7 +27,8 @@
 .ads_01 b{color:#000e2f;display:block;}
 .ads_02_wrapper{padding-bottom:2%;}
 .ads_02{position:absolute;left:15%;top:20%;}
-.ads_02 b{display:block;}
+.ads_02 span{font-weight:bold;}
+.ads_02 b{color:#ffd600;}
 /*特惠商品*/
 .tehui ul{margin:2%;width:96%;}
 .tehui li{border:1px solid #848484;border-radius:8px 8px 0 0;width:32%;margin-right:0.9%;margin-bottom:2%;}
@@ -40,9 +40,8 @@
 .tehui_purchase .tehui_price{position:absolute;left:10%;top:0;color:#fff;}
 .tehui_purchase .tehui_btn{position:absolute;right:1%;bottom:1%;color:#fff;}
 /*推荐商品*/
-.tuijian{}
-.tuijian ul{margin:2% 0;width:96%;}
-.tuijian li{margin-left:2%;width:47%;}
+.tuijian ul{margin:2% 0;width:100%;}
+.tuijian li{margin:1% 0 1% 2%;width:47%;}
 .tuijian .tuijian_pic{position:absolute;left:0;bottom:0;width:50%;padding-bottom:5%;}
 .tuijian .tuijian_pic img{width:85%;margin:0 auto;display:block;}
 .tuijian .tuijian_name{position:absolute;right:5%;top:5%;width:46%;text-align:left;height:40px;overflow:hidden;}
@@ -64,3 +63,18 @@
 .advantages .advantages_title{font-weight:bold;display:block;line-height:24px;}
 .advantages .txt_r{text-align:right;}
 .advantages .advantages_content{line-height:18px;}
+/*新闻资讯*/
+.news{}
+.news .hd{background-color:#2659D1;}
+.news .hd li{float:left;padding:1% 5%;background:#D5D5D5;}
+.news .hd li span{color:#2659d1;font-weight:bold;cursor:pointer;}
+.news .hd li.on{background-color:#2659D1;}
+.news .hd li.on span{color:#fff;}
+.news .news_box{padding:0.5% 1%;}
+.news_box .news_category{border-top:2px solid #ACACAC;border-bottom:2px solid #ACACAC;}
+.news_category b{padding-left:4%;}
+.news_category a{padding-right:4%;}
+.news_box ul{}
+.news_box li{padding:0 3%;border-bottom:1px dotted #565656;width:94%;}
+.news_box li a{width:70%;display:block;overflow:hidden;line-height:22px;height:22px;}
+.news_box li span{display:block;line-height:22px;}
