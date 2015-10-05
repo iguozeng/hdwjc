@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="gb2312">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>华东五金网</title>
 		<link href="css/global.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">

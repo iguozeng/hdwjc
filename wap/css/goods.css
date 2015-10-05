@@ -1,0 +1,23 @@
+@charset "gb2312";
+/*列表页左侧分类*/
+.goods_categary{width:25%;}
+.categary_box{}
+.categary_box h4{background:#2659D1;padding:2% 0;width:100%;}
+.categary_box h4 img{padding:0 5%;width:20%;vertical-align:bottom;}
+.categary_box h4 a{width:65%;color:#fff;}
+.categary_box ul{}
+.categary_box li{}
+.categary_box li a{}
+/*列表页右侧商品列表*/
+.goods_list{width:75%;}
+.goods_list .subCategary{}
+.subCategary li{}
+.subCategary a{}
+.goods{}
+.goods li{}
+.goods .goods_name{}
+.goods .good_pic{}
+.goods .good_pic img{}
+.goods label{}
+.goods .addToCart{}
+.goods .addToCart img{}
