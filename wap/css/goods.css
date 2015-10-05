@@ -2,22 +2,25 @@
 /*列表页左侧分类*/
 .goods_categary{width:25%;}
 .categary_box{}
-.categary_box h4{background:#2659D1;padding:2% 0;width:100%;}
-.categary_box h4 img{padding:0 5%;width:20%;vertical-align:bottom;}
-.categary_box h4 a{width:65%;color:#fff;}
-.categary_box ul{}
-.categary_box li{}
-.categary_box li a{}
+.categary_box h4{background:#2659D1;padding:5% 0;width:100%;}
+.categary_box h4 img{padding:0 5%;width:20%;vertical-align:middle;}
+.categary_box h4 a{width:65%;color:#fff;vertical-align:middle;font-weight:bold;}
+.categary_box ul{border-right:1px solid #B8B8B8;}
+.categary_box li{border-bottom:1px solid #B8B8B8;}
+.categary_box .lastCategary{border-bottom:none;}
+.categary_box li a{color:#333;line-height:24px;width:100%;text-align:center;display:block;}
+.categary_box li a.current{color:#2659d1;}
 /*列表页右侧商品列表*/
 .goods_list{width:75%;}
-.goods_list .subCategary{}
-.subCategary li{}
-.subCategary a{}
-.goods{}
-.goods li{}
-.goods .goods_name{}
-.goods .good_pic{}
-.goods .good_pic img{}
-.goods label{}
-.goods .addToCart{}
-.goods .addToCart img{}
+.goods_list .subCategary{border-bottom:1px solid #CDCDCD;padding:3% 0 3%;}
+.subCategary li{margin-left:5%;float:left;padding:1% 5%;background:#EBEBEB;border:1px solid #EBEBEB;border-radius:8px;margin-bottom:2%;box-shadow:0 3px 3px #C8C8C8;}
+.subCategary a{color:#333;}
+.subCategary a.current{color:#2659d1;}
+.goods{margin-top:2%;}
+.goods li{width:47%;margin-left:2%;margin-bottom:2%;background-color:#F8F8F8;position:relative;float:left;}
+.goods .goods_name{width:90%;padding:8% 0 5%;padding-left:5%;line-height:18px;height:36px;display:block;}
+.goods .good_pic{width:90%;padding-left:5%;display:block;margin:5% 0;}
+.goods .good_pic img{width:95%;margin:0 auto;display:block;}
+.goods label{width:90%;padding-left:5%;text-align:center;display:block;color:#ff0000;line-height:22px;height:22px;padding:2% 0;}
+.goods .addToCart{position:absolute;right:0;bottom:0;display:block;width:30%;}
+.goods .addToCart img{width:100%;}
