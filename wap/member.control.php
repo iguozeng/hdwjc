@@ -20,7 +20,7 @@ $page_name='个人中心';
 	<img src="images/profile_bg.jpg" class="bg">
     <div class="top_profile">
     	<strong>五金网会员<label>VIP</label></strong>
-        <span>加盟时间：2015-03-26</span>
+        <span>注册时间：2015-03-26</span>
         <span>积分 0</span>
     </div>
 </div>

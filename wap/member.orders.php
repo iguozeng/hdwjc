@@ -163,6 +163,7 @@ $(function($){
 </script>
 </head>
 <body>
+<div class="warmp">
 <?php require_once 'p.header.php';?>
 <form action="" method="post">
 <div class="address_array">
@@ -281,5 +282,6 @@ foreach($Array_OrderId as $OrderId){
 </div>
 </form>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>

@@ -14,6 +14,7 @@ $page_name='已购商品';
 <script src="js/jquery.m.ui.js"></script>
 </head>
 <body>
+<div class="warmp">
 <?php require_once 'p.header.php';?>
 <div class="bought_cart_array">
 	<ul>
@@ -51,5 +52,6 @@ $page_name='已购商品';
 </div>
 <?php require_once 'slides.php';?>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>

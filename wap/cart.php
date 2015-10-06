@@ -30,6 +30,7 @@ $page_name="¹ºÎï³µ";
 <script src="js/jquery.m.ui.js" type="text/javascript"></script>
 </head>
 <body>
+<div class="warmp">
 <?php require_once 'p.header.php';?>
 <form action="member.orders.php" method="post" name="cartform">
 <input type="hidden" name="action" value="null" />
@@ -96,5 +97,6 @@ if(num_rows($result)){
 </div>
 </form>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>

@@ -190,6 +190,7 @@ $page_name='用户登录';
 <script src="js/jquery.m.ui.js"></script>
 </head>
 <body>
+<div class="warmp">
 <?php require_once 'p.header.php';?>
 <div class="wrapper loginform">
 <form name="Loginform" method="post">
@@ -227,5 +228,6 @@ $page_name='用户登录';
 </div>
 <?php require_once 'slides.php';?>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>

@@ -92,5 +92,19 @@ class global_event{
 		return $str;
 	}
 	//end added
+	
+		function get_list_sort($sortid,$selectid){
+		$result=query("select ProductClassId,NavigationName,Id from site_navigation_left1_tbl where FromMenuPanelId='".$sortid."' order by OrderNumber;");
+		if(num_rows($result))
+		{
+			while($row=fetch_array($result))
+			{
+				$str.='<li><a href="goods_list.php?sortid='.$row[0].'">'.$row[1].'</a></li>';
+			}
+		}else{
+			$str.='<a>无下级分类</a>';	
+		}
+		return $str;
+	}
 }
 ?>

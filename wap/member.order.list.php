@@ -14,6 +14,7 @@ $page_name='订单查询';
 <script src="js/jquery.m.ui.js"></script>
 </head>
 <body>
+<div class="warmp">
 <?php require_once 'p.header.php';?>
 <div class="orders_statu">
 	<ul>
@@ -72,5 +73,6 @@ $page_name='订单查询';
     <span>合计金额：&yen; 213.00</span>
 </div>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>

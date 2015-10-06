@@ -1,3 +1,10 @@
+<?php
+$page_name='商品列表';
+require_once 'include/init.php';
+require_once YXS.'global.class.php';
+$global_event=new global_event();
+$ProductClassId=str2int($sortid);
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -7,15 +14,42 @@
 		<title>华东五金网</title>
 		<link href="css/global.css" rel="stylesheet">
 		<link href="css/goods.css" rel="stylesheet">
-		<script src="js/jquery-1.8.3.min.js"></script>
+		<script language="javascript">var idPage="product.list",sortid=<?php echo $ProductClassId;?>,words='<?php echo $strKeys;?>';</script>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+		<script src="js/jquery.m.ui.js" type="text/javascript"></script>
 	</head>
 	<body>
 <!--左侧分类-->
 		<div class="goods_categary txt_wrapper fl">
-			<div class="categary_box">
-				<h4><img src="images/gywj.png" /><a class="txt" href="">工业五金</a></h4>
-				<ul>
-					<li><a class="current" href="">机电设备</a></li>
+		<div class="categary_box">
+		<?php
+			$results=query("select ProductClassId,NavigationName,Id from site_navigation_left1_tbl where Level=1 order by OrderNumber;");
+			if(num_rows($results))
+			{
+				$i=1;
+				while($rows=fetch_array($results))
+				{
+					$sql="select ProductClassId,NavigationName,Id from site_navigation_left1_tbl where FromMenuPanelId='".$rows[0]."' order by OrderNumber;";
+					//echo $sql;exit;
+					$result=query("select ProductClassId,NavigationName,Id from site_navigation_left1_tbl where FromMenuPanelId='".$rows[0]."' order by OrderNumber;");
+					if(num_rows($result))
+					{
+						echo '<h4><img src="images/gywj.png" /><a class="txt" href="">'.$rows[1].'</a></h4>
+								<ul>';
+						while($row=fetch_array($result))
+						{
+							if($ProductClassId==$row[0]){$strselected=' class="current"';}else {$strselected='';}
+							echo '<li><a '.$strselected.' href="goods_list.php?sortid='.$row[0].'">'.$row[1].'</a></li>';
+						}
+						echo '</ul>';
+					}
+				}
+			}
+		?>
+		</div>	
+				
+				
+					<!-- <li><a class="current" href="">机电设备</a></li>
 					<li><a href="">起重设备</a></li>
 					<li><a href="">电动工具</a></li>
 					<li><a href="">手动工具</a></li>
@@ -31,14 +65,15 @@
 					<li><a href="">电工电料</a></li>
 					<li><a href="">照明灯具</a></li>
 					<li><a href="">装饰洁具</a></li>
-				</ul>
-			</div>
+				</ul> -->
+			
 		</div>
 <!--左侧分类end-->
 <!--右侧商品列表-->
 		<div class="goods_list fl">
 			<ul class="subCategary">
-				<li><a class="current" href="">锤子</a></li>
+			<?php echo $global_event->get_list_sort($ProductClassId);?>
+				<!-- <li><a class="current" href="">锤子</a></li>
 				<li><a href="">工具包</a></li>
 				<li><a href="">钢丝钳</a></li>
 				<li><a href="">尖嘴钳</a></li>
@@ -46,11 +81,11 @@
 				<li><a href="">管子钳</a></li>
 				<li><a href="">黄油枪</a></li>
 				<li><a href="">打包机</a></li>
-				<li><a href="">活动扳手</a></li>
+				<li><a href="">活动扳手</a></li>-->
 				<div class="clear"></div>
 			</ul>
 			<ul class="goods">
-				<li>
+				<!-- <li>
 					<a class="goods_name" href="">电工腰包配腰带/多功能工具包帆布</a>
 					<a class="good_pic" href=""><img src="images/[Temp]20150625164316_29905.gif" /></a>
 					<label>￥115.00</label>
@@ -85,7 +120,7 @@
 					<a class="good_pic" href=""><img src="images/[Temp]20150923154221_65296.png" /></a>
 					<label>￥115.00</label>
 					<a class="addToCart" href=""><img src="images/addToCart.png" /></a>
-				</li>
+				</li> -->
 			</ul>
 			<script type="text/javascript">
 				var height = $(".good_pic img").width();
