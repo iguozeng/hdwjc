@@ -229,7 +229,7 @@ $(function($){
 <?php
 foreach($Array_OrderId as $OrderId){
 ?>
-<div class="cart_array" style="margin-top:5px; min-height:100px; border-top:0;">
+<div class="cart_array">
 	<ul>
 	<?php
             $all_amount=0;
@@ -273,6 +273,8 @@ foreach($Array_OrderId as $OrderId){
 <?php
 }
 ?>
+
+<?php require_once 'slides.php';?>
 <div class="action_buy">
 	<input type="button" class="buy_button" value="结 算">
     <span>合计金额：&yen; 213.00</span>

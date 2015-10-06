@@ -10,6 +10,8 @@ $page_name='订单查询';
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 <link href="css/global.css" rel="stylesheet">
 <link href="css/default.css" rel="stylesheet">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.m.ui.js"></script>
 </head>
 <body>
 <?php require_once 'p.header.php';?>
@@ -64,6 +66,7 @@ $page_name='订单查询';
         </li>
     </ul>
 </div>
+<?php require_once 'slides.php';?>
 <div class="action_buy">
 	<input type="button" class="buy_button" value="结 算">
     <span>合计金额：&yen; 213.00</span>

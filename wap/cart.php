@@ -89,6 +89,7 @@ if(num_rows($result)){
 }?>
     </ul>
 </div>
+<?php require_once 'slides.php';?>
 <div class="action_buy">
 	<input type="button" class="buy_button" value="结 算" name="pay_send">
     <span>合计金额：&yen; <?php echo $SumPrice;?></span>
