@@ -157,6 +157,25 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .log_array li label{display:block;float:left;width:75px;height:30px;margin-left:8px;line-height:30px;color:#999;overflow:hidden;}
 .log_array li span{display:block;float:left;width:100%;position:absolute;margin-left:80px;height:30px;line-height:30px;color:#666;overflow:hidden;}
 
+/* 在线支付 */
+.pay_frame{clear:both;display:block;position:relative; padding:45px 0 55px 0; background:#fff; min-height:400px;}
+.pay_menu{display:block;float:left;width:30%;max-width:120px;min-height:300px;}
+.pay_menu dt{height:40px;line-height:40px;background-color:#ffe5e5;font-size:16px;text-align:center;}
+.pay_menu dd ul{border-right:#eee solid 2px;}
+.pay_menu dd li{height:50px;line-height:50px;border-bottom:#eee solid 1px;padding-left:13px;font-size:14px;}
+.pay_menu dd li.selected{background-color:#eee;border-left:#2658D1 solid 3px;padding-left:10px;}
+.pay_menu dd li a{font-size:14px;display:block;}
+.pay_menu dd li.selected a{color:#510008;}
+.pay_array{display:block;float:right;width:70%;min-height:300px;}
+.pay_num{margin:20px auto 0 auto;width:95%;font-size:14px;line-height:30px;border:#c0a9a9 solid 1px;border-bottom:#c0a9a9 solid 3px;border-radius:5px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
+.pay_num span{display:block;padding:10px 10px 0 10px;}
+.pay_num span strong{font-size:18px;color:#f02605;}
+.pay_num font{display:block;padding:0 10px 10px 10px;}
+.pay_num font label{padding-right:10px;}
+.send_post{display:block;width:95%;border-radius:5px;border:none;background:#2658D1;height:40px;line-height:40px;color:#FFF;padding:0 15px 0 15px;font-size:14px;margin:10px auto 0 auto;cursor:pointer;}
+.open_post{display:block;width:95%;border-radius:5px;border:none;background:#ddd;height:40px;line-height:40px;color:#FFF;padding:0 15px 0 15px;font-size:14px;margin:10px auto 0 auto;cursor:pointer;}
+.pay_cmf{margin:10px auto 10px auto;width:95%;line-height:30px;font-size:14px;color:#999;}
+
 @media screen and (min-width:320px) {
 .array_title span{font-size:1.1em;}
 .array_title a{font-size:1.1em;}
