@@ -1,6 +1,8 @@
 /* 登录 注册 */
 .wrapper{ min-width:320px; max-width:480px; position:relative; margin:0 auto;}
 .ui_header{width: 100%;height:45px;line-height: 45px;z-index: 99999;position: fixed;left: 0;top: 0;right: 0; background:#F9F9F9; border-bottom:solid 1px #D6D6D6; overflow:hidden;}
+.ui_header.opened{margin-left:-140px;}
+.ui_header.closed{margin-left:0;}
 .pre{position: absolute;top: 0px;left:5px;display: block;width: 45px;height: 45px; background:url(../images/pre.png) no-repeat center center;background-size:35px 35px;}
 .refresh{position: absolute;top: 0px;left:40px;display: block;width: 45px;height: 45px; background:url(../images/refresh.png) no-repeat center center;background-size:35px 35px;}
 .ui_header .search{ position:absolute; top:0; right:45px; width:55px;height:45px; background:url(../images/search.png) no-repeat center center;background-size:35px 35px;}
@@ -16,6 +18,9 @@
 font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 
 .ui_footer{ clear:both;width:100%;position: fixed; left:0; bottom:0; height:55px; background:#2659D1;}
+.footer{min-width:320px; max-width:480px; position:relative; margin:0 auto;}
+.footer.opened{margin-left:-140px;}
+.footer.closed{margin-left:0;}
 .telephone{ width:20%; position:absolute; margin:0 auto; left:0; right:0; bottom:-40px; background:#FFF;border-radius: 50%; border:solid 1px #CCCCCC;}
 .telephone img{ display:block; width:100%;}
 .ui_left{ width:40%; position:absolute; left:0; top:0; height:55px; text-align:center;}
@@ -96,7 +101,76 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .array_column strong span{ display:block; float:left;font-size:1.2em;}
 .array_column strong label{ display:block; float:right;font-size:1.2em;}
 .array_column strong label em{ color:#F00; font-style:normal;font-size:1em;}
-.status{ clear:both;display:block;height:30px; line-height:30px;color:#aaa;font-size:1.2em;}
+.status{ clear:both;display:block;height:20px; line-height:20px;color:#aaa;font-size:1.2em;}
 .array_pic{ clear:both; overflow:hidden;}
 .array_pic a{ display:block; float:left; width:18%;padding:1%; text-align:center; border-radius:15px;}
 .array_pic a img{ width:100%; margin:0 auto;border-radius:15px; }
+
+/* 个人中心 */
+.info_profile{ margin-top:45px; position:relative;}
+.top_profile{ position:absolute; top:10%; left:30%; width:50%; text-align:left;}
+.top_profile strong{ display:block; height:40px; width:130px; line-height:40px; font-size:1.5em; position:relative;}
+.top_profile strong label{ position:absolute; right:0; bottom:20px; display:block; width:27px; height:15px; background:#F00; color:#FFF; line-height:15px; text-align:center;}
+.top_profile span{ display:block; color:#666; height:20px; line-height:20px; font-size:1.2em;}
+.count_array{ height:60px; background:#000;padding-top:1%;}
+.count_array a{ display:block; float:left; width:33%; height:60px; text-align:center;  overflow:hidden; }
+.count_array a img{ display:block; height:55%; margin:0 auto;}
+.count_array a span{ color:#FFF; display: block; height:39%; line-height:22px;}
+.partion{ clear:both; height:15px; background:#F7F7F7; border-bottom:solid 1px #D6D6D6; border-top:solid 1px #D6D6D6;}
+.menu_array ul{ width:95%; margin:0 auto; padding:5px 0 5px 0; }
+.menu_array ul li{ clear:both;height:40px; line-height:40px; border-bottom:solid 1px #D6D6D6;}
+.menu_array ul li.li_01{ background:url(../images/ico_10.png) no-repeat; background-size:35px 35px;}
+.menu_array ul li.li_02{ background:url(../images/ico_11.png) no-repeat; background-size:35px 35px;}
+.menu_array ul li.li_03{ background:url(../images/ico_12.png) no-repeat; background-size:35px 35px;}
+.menu_array ul li.li_04{ background:url(../images/ico_13.png) no-repeat; background-size:35px 35px;}
+.menu_array ul li.li_05{ background:url(../images/ico_14.png) no-repeat; background-size:35px 35px; border:0;}
+.menu_array ul li a{ display:block; float:left; margin-left:50px; width:80%;height:40px; font-size:1.3em; color:#333;}
+.menu_array ul li a span{ display:block; float:left; width:15%; height:40px; color:#CACACA;}
+.record_array{ clear:both; padding:10px 0 70px 0; min-height:200px;}
+.record_array ul li{ border-bottom:dashed 1px #ccc; border-top:dashed 1px #ccc; margin-bottom:10px; width:95%; margin:0 auto;}
+.record_array li span{ display:block; line-height:30px; font-size:16px; color:#979797;}
+.record_array li span label{ margin-left:5px; color:#ccc;}
+.record_array li strong{ display:block; line-height:20px; margin:5px 0 10px 0; font-size:1.2em;}
+
+/* 侧边 */
+.warmp{width:100%;max-width:1280px;}
+.warmp.opened{float:left;margin-left:-140px;}
+.warmp.closed{float:none;margin-left:0;}
+.slides{width:140px;position:fixed;top:0;right:0;background-color:#111;height:100%;min-height:500px;display:none;z-index:9999;}
+.slides.opened{display:block;}
+.slides.closed{float:none;display:none;}
+.slides dt{color:#eee;font-size:20px;height:50px;padding-left:10px;}
+.slides dt a{color:#eee;font-size:20px;height:50px;line-height:50px;}
+.slides dd{overflow-y:scroll;}
+.slides dd li{height:40px}
+.slides dd li a{display:block;color:#ccc;padding-left:15px;font-size:14px;height:40px;line-height:40px;border-bottom:#222 solid 1px;}
+
+@media screen and (min-width:320px) {
+.array_title span{font-size:1.1em;}
+.array_title a{font-size:1.1em;}
+.array_column strong span{ font-size:1.1em;}
+.array_column strong label{ font-size:1.1em;}
+.array_column strong label em{ font-size:0.9em;}
+.status{font-size:1.1em;}
+
+.top_profile{top:5%;}
+.top_profile strong{ height:30px; width:130px; line-height:30px; font-size:1.3em;}
+.top_profile strong label{ bottom:10px;}
+.top_profile span{ display:block; color:#666; height:20px; line-height:20px; font-size:1em;}
+}
+@media screen and (min-width:360px) {
+	
+.top_profile{top:10%;}
+.top_profile strong{height:40px; width:130px; line-height:40px; font-size:1.5em;}
+.top_profile strong label{ width:27px; height:15px; bottom:20px;}
+.top_profile span{ height:20px; line-height:20px; font-size:1.2em;}
+}
+@media screen and (min-width:375px) {
+
+}
+@media screen and (min-width:414px) {
+
+}
+@media screen and (min-width:480px) {
+
+}
