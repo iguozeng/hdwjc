@@ -14,12 +14,39 @@ $page_name='历史账单';
 <script src="js/jquery.m.ui.js"></script>
 </head>
 <body>
+<div class="warmp">
 <?php require_once 'p.header.php';?>
 <div class="account_array">
-            <ul><li><strong>预存余额扣除</strong><span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span></li><li><strong>预存余额扣除</strong><span>金额：0.01，MXSO0000000104，产生时期：2015-09-23</span></li><li><strong>预存余额扣除</strong><span>金额：0.01，MXSO0000000103，产生时期：2015-09-23</span></li><li><strong>预存余额扣除</strong><span>金额：0.01，MXSO0000000102，产生时期：2015-09-23</span></li><li><strong>预存余额扣除</strong><span>金额：0.01，MXSO0000000102，产生时期：2015-09-23</span></li></ul>
+            <ul>
+            	<li>
+                    <strong>预存余额扣除</strong>
+                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
+                </li>
+				<li>
+                    <strong>预存余额扣除</strong>
+                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
+                </li>
+                <li>
+                    <strong>预存余额扣除</strong>
+                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
+                </li>
+                <li>
+                    <strong>预存余额扣除</strong>
+                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
+                </li>
+                <li>
+                    <strong>预存余额扣除</strong>
+                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
+                </li>
+                <li>
+                    <strong>预存余额扣除</strong>
+                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
+                </li>
+            </ul>
         </div>
 
 <?php require_once 'slides.php';?>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>
