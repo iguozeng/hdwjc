@@ -19,8 +19,8 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 
 .ui_footer{ clear:both;width:100%;position: fixed; left:0; bottom:0; height:55px; background:#2659D1;}
 .footer{min-width:320px; max-width:480px; position:relative; margin:0 auto;}
-.footer.opened{margin-left:-140px;}
-.footer.closed{margin-left:0;}
+.ui_footer.opened{margin-left:-140px;}
+.ui_footer.closed{margin-left:0;}
 .telephone{ width:20%; position:absolute; margin:0 auto; left:0; right:0; bottom:-40px; background:#FFF;border-radius: 50%; border:solid 1px #CCCCCC;}
 .telephone img{ display:block; width:100%;}
 .ui_left{ width:40%; position:absolute; left:0; top:0; height:55px; text-align:center;}

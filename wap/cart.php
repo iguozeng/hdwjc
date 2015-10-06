@@ -1,12 +1,9 @@
 <?php
 require_once 'include/init.php';
 require_once YXS.'check.member.php';
-//require_once YXS.'cart.class.php';
-require_once YXS.'global.class.php';
 if(str2int(CacheEnable)==1){
 	if($cacheact!='rewrite')$cache->load();
 }
-$global=new global_event();
 $UserId=str2int($_SESSION["MemberId"]);
 if($UserId>0){
 	$IsRegisterUser=1;
@@ -17,7 +14,7 @@ if($UserId>0){
 }
 drop_cart_unique();
 $OrderClass=get_doc_code('MemberOrderHead',"k");
-$global->HeaderTitle="购物车";
+$page_name="购物车";
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -28,10 +25,16 @@ $global->HeaderTitle="购物车";
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 <link href="css/global.css" rel="stylesheet">
 <link href="css/default.css" rel="stylesheet">
+<script language="javascript">var idPage="cart";</script>
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.m.ui.js" type="text/javascript"></script>
 </head>
 <body>
 <?php require_once 'p.header.php';?>
-<form action="" method="post">
+<form action="member.orders.php" method="post" name="cartform">
+<input type="hidden" name="action" value="null" />
+<input type="hidden" name="dataid" value="0" />
+<input type="hidden" name="datanum" value="0" />
 <div class="cart_array">
 	<ul>
 	<!--added by huafang at 2015-10-4-->
@@ -74,12 +77,12 @@ if(num_rows($result)){
                 <span>规格型号：'.$ProductType.'</span>
                 <h4>'.$ProductBrandName.','.$LocalityName.'</h4>
                 <div class="modified">
-                	<input type="button" class="input_btn" value="-" />
-                    <input type="text" class="input_text" readonly value="'.$Total.'" />
-                    <input type="button" class="input_btn" value="+" />
+                	<input type="button" class="input_btn" value="-" data-action="reduction" data-tid="'.$row[0].'"/>
+                    <input type="text" class="input_text num_'.$row[0].'" readonly value="'.$Total.'" />
+                    <input type="button" class="input_btn" value="+" data-action="add" data-tid="'.$row[0].'"/>
                 </div>
             </div>
-            <em class="off">×</em>
+            <em class="off" data-tid="'.$row[0].'">×</em>
             <em class="price">&yen; '.$TotalPrice.'</em>
         </li>';
 	}
@@ -87,7 +90,7 @@ if(num_rows($result)){
     </ul>
 </div>
 <div class="action_buy">
-	<input type="button" class="buy_button" value="结 算">
+	<input type="button" class="buy_button" value="结 算" name="pay_send">
     <span>合计金额：&yen; <?php echo $SumPrice;?></span>
 </div>
 </form>

@@ -157,7 +157,7 @@ function event_login(){
 			}
 			if(isnull($BcakUrl))
 			{
-				header("Location:m_member.control.php");
+				header("Location:member.control.php");
 			}else{
 				header("Location:$BcakUrl");
 			}

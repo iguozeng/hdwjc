@@ -90,5 +90,6 @@ $page_name='个人中心';
     </dl>
 </div>
 <?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <div class="ui_footer">
-	<div class="footer">
+	<div class="wrapper">
     	<div class="telephone">
         	<a href=""><img src="images/telephone.png"></a>
         </div>

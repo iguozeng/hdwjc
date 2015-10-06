@@ -6,7 +6,7 @@
         <a href="#" class="refresh"></a>
         <span><?php echo $page_name; ?></span>
         <a href="" class="search"></a>
-        <a href="" class="person"></a>
+        <a href="javascript:void(0);" class="person"></a>
     </div>
 </div>
 </div>
