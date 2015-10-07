@@ -1,3 +1,8 @@
+<?php
+require_once 'include/init.php';
+require_once 'global.class.php';
+$global=new global_event();
+?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
@@ -40,16 +45,16 @@
 		</script>
 		<div class="cate_nav_01">
 			<ul>
-				<li><a href=""><img src="images/cate_icon_01.png" /><span>发电机</span></a></li>
-				<li><a href=""><img src="images/cate_icon_02.png" /><span>空压机</span></a></li>
-				<li><a href=""><img src="images/cate_icon_03.png" /><span>电动机</span></a></li>
-				<li><a href=""><img src="images/cate_icon_04.png" /><span>电焊机</span></a></li>
-				<li><a href=""><img src="images/cate_icon_05.png" /><span>节能灯</span></a></li>
-				<li><a href=""><img src="images/cate_icon_06.png" /><span>开关</span></a></li>
-				<li><a href=""><img src="images/cate_icon_07.png" /><span>电线电缆</span></a></li>
-				<li><a href=""><img src="images/cate_icon_08.png" /><span>法兰</span></a></li>
-				<li><a href=""><img src="images/cate_icon_09.png" /><span>钢丝绳</span></a></li>
-				<li><a href=""><img src="images/cate_icon_10.png" /><span>吊带</span></a></li>
+				<li><a href="list.php?sortid=5"><img src="images/cate_icon_01.png" /><span>发电机</span></a></li>
+				<li><a href="list.php?sortid=6"><img src="images/cate_icon_02.png" /><span>空压机</span></a></li>
+				<li><a href="list.php?sortid=42"><img src="images/cate_icon_03.png" /><span>电动机</span></a></li>
+				<li><a href="list.php?sortid=8"><img src="images/cate_icon_04.png" /><span>电焊机</span></a></li>
+				<li><a href="list.php?sortid=33"><img src="images/cate_icon_05.png" /><span>节能灯</span></a></li>
+				<li><a href="list.php?sortid=38"><img src="images/cate_icon_06.png" /><span>开关</span></a></li>
+				<li><a href="list.php?sortid=36"><img src="images/cate_icon_07.png" /><span>电线电缆</span></a></li>
+				<li><a href="list.php?sortid=4"><img src="images/cate_icon_08.png" /><span>法兰</span></a></li>
+				<li><a href="list.php?sortid=11"><img src="images/cate_icon_09.png" /><span>钢丝绳</span></a></li>
+				<li><a href="list.php?sortid=44"><img src="images/cate_icon_10.png" /><span>吊带</span></a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -138,11 +143,11 @@
 		</script>
 		<div class="cate_nav_02">
 			<ul>
-				<li><a href=""><span>插座</span><img src="images/cate_icon_11.png" /></a></li>
-				<li><a href=""><span>日光灯</span><img src="images/cate_icon_12.png" /></a></li>
-				<li><a href=""><span>螺丝</span><img src="images/cate_icon_13.png" /></a></li>
-				<li><a href=""><span>门锁</span><img src="images/cate_icon_14.png" /></a></li>
-				<li class="last"><a href=""><span>活动扳手</span><img src="images/cate_icon_15.png" /></a></li>
+				<li><a href="list.php?sortid=40"><span>插座</span><img src="images/cate_icon_11.png" /></a></li>
+				<li><a href="list.php?sortid=30"><span>日光灯</span><img src="images/cate_icon_12.png" /></a></li>
+				<li><a href="list.php?sortid=18"><span>螺丝</span><img src="images/cate_icon_13.png" /></a></li>
+				<li><a href="list.php?sortid=39"><span>门锁</span><img src="images/cate_icon_14.png" /></a></li>
+				<li class="last"><a href="list.php?sortid=20"><span>活动扳手</span><img src="images/cate_icon_15.png" /></a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -210,11 +215,11 @@
 		</div>
 		<div class="cate_nav_02">
 			<ul>
-				<li><a href=""><span>开关</span><img src="images/cate_icon_16.png" /></a></li>
-				<li><a href=""><span>销</span><img src="images/cate_icon_17.png" /></a></li>
-				<li><a href=""><span>电器</span><img src="images/cate_icon_18.png" /></a></li>
-				<li><a href=""><span>打包机</span><img src="images/cate_icon_19.png" /></a></li>
-				<li class="last"><a href=""><span>黄油枪</span><img src="images/cate_icon_20.png" /></a></li>
+				<li><a href="list.php?sortid=38"><span>开关</span><img src="images/cate_icon_16.png" /></a></li>
+				<li><a href="list.php?sortid=19"><span>销</span><img src="images/cate_icon_17.png" /></a></li>
+				<li><a href="list.php?sortid=37"><span>电器</span><img src="images/cate_icon_18.png" /></a></li>
+				<li><a href="list.php?sortid=21"><span>打包机</span><img src="images/cate_icon_19.png" /></a></li>
+				<li class="last"><a href="list.php?sortid=22"><span>黄油枪</span><img src="images/cate_icon_20.png" /></a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -292,20 +297,54 @@
 		</div>
 		<div class="honor">
 			<ul>
+            <?php
+			$result=query("select Title,RootPic from arcitle_tbl where ArcitleSortId=23 order by OrderNumber,ArcitleId desc limit 2");
+			if(num_rows($result))
+			{
+			while($honor_row=fetch_array($result)){
+				echo '<li><img src="'.get_img($honor_row["RootPic"]).'" /><a href="">'.$honor_row["Title"].'</a></li>';
+			}
+			}
+			?>
+            	<!--
 				<li><img src="images/[Temp]honor.jpg" /><a href="">十大五金材料交易市场第一名</a></li>
 				<li><img src="images/[Temp]honor.jpg" /><a href="">十大五金材料交易市场第一名</a></li>
+                -->
 			</ul>
 		</div>
 		<div id="news" class="news">
 			<div class="hd txt_wrapper">
 				<ul>
+                <?php
+					$arrayArcitleSorts=array();
+					$result=query("select ArcitleSortId,ArcitleSortName from arcitle_sort_tbl where BeSortId=1 order by OrderNumber,ArcitleSortId limit 3");
+					if(num_rows($result))
+					{
+						while($row=fetch_array($result))
+						{
+							$id=$row[0];
+							$str=str_ireplace(array("\r\n", "\r", "\n"),"",$row[1]);
+							$arrayArcitleSorts[$id]=$str;
+							//echo'<span data-chk="0">'.$str.'</span>';
+							echo'<li><span data-chk="0" class="txtS">'.$str.'</span></li>';
+						}
+					}
+				?>
+                <!--
 					<li><span class="txtS">新闻动态</span></li>
 					<li><span class="txtS">行业资讯</span></li>
 					<li><span class="txtS">活动公告</span></li>
+                -->
 					<div class="clear"></div>
 				</ul>
 			</div>
 			<div class="bd">
+            	<?php foreach($arrayArcitleSorts as $key=>$val){echo '<div class="news_box">
+					<div class="news_category txt_wrapper">
+						'.$global->get_news_title($key).'
+					</div>
+					<ul>'.$global->get_news_list($key).'</ul></div>';}?>
+            	<!--
 				<div class="news_box">
 					<div class="news_category txt_wrapper">
 						<b class="txtS fl">新闻动态</b><a class="fr txtS" href="">+更多&gt;&gt;</a><div class="clear"></div>
@@ -342,8 +381,11 @@
 						<li><a class="fl" href="">你的客户在网上，为何你不去网上你的客户在网上，为何你不去网上</a><span class="fr">2015-7-15</span><div class="clear"></div></li>
 					</ul>
 				</div>
+                -->
 			</div>
 		</div>
+        <?php echo $global->get_hot_sort();?>
+		<div class="product_list"><dl><dt>商品展示</dt><dd><ul></ul></dd></dl></div>
 		<script type="text/javascript">
 			TouchSlide({ 
 				slideCell:"#news",

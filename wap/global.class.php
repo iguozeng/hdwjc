@@ -52,10 +52,27 @@ class global_event{
 			while($rows=fetch_array($result))
 			{
 				if(str2int(datediff("d",date("Y-m-d H:i:s"),format_dt($rows['DateTime'],'%Y-%m-%d %H:%M:%S')))<=45){$strStyle=' class="chk"';}else{$strStyle='';}
-				$str.='<li><a href="/m_news_detail.php?id='.$rows[0].'" title="'.$rows["Title"].'"'.$strStyle.'>'.$rows["Title"].'</a><label>'.format_dt($rows['DateTime'],'%y-%m-%d').'</label></li>';
+				$str.='<li><a href="/news_detail.php?id='.$rows[0].'" title="'.$rows["Title"].'" class="fl">'.$rows["Title"].'</a><span class="fr">'.format_dt($rows['DateTime'],'%y-%m-%d').'</span><div class="clear"></div></li>';
 			}
 		}else{
 			$str.='<li><a>暂无相关信息</a></li>';	
+		}
+		return $str;
+	}
+	
+	/*
+	** author by jiaown
+	** param 获取信息类别名称
+	*/
+	function get_news_title($sortid){
+		$str='';
+		$result=query("select ArcitleSortId,ArcitleSortName from arcitle_sort_tbl where BeSortId=1 and ArcitleSortId=$sortid order by OrderNumber,ArcitleSortId limit 3");	
+		if(num_rows($result))
+		{
+			while($rows=fetch_array($result))
+			{
+				$str.='<b class="txtS fl">'.$rows[1].'</b><a class="fr txtS" href="/news_list.php?sortid='.$rows[0].'">+更多&gt;&gt;</a><div class="clear"></div>';
+			}
 		}
 		return $str;
 	}
