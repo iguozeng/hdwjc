@@ -5,17 +5,19 @@ $global=new global_event();
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="gb2312">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<title>华东五金网</title>
-		<link href="css/global.css" rel="stylesheet">
-		<link href="css/index.css" rel="stylesheet">
-		<script src="js/jquery-1.8.3.min.js"></script>
-		<script src="js/TouchSlide.1.1.js"></script>
-	</head>
-	<body>
+<head>
+<meta charset="gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>华东五金网</title>
+<link href="css/global.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script language="javascript">var idPage="index";</script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+<script src="js/jquery.m.ui.js"></script>
+</head>
+<body>
 <!--头部、焦点图及导航-->
 		<div class="header">
 			
@@ -384,8 +386,7 @@ $global=new global_event();
                 -->
 			</div>
 		</div>
-        <?php echo $global->get_hot_sort();?>
-		<div class="product_list"><dl><dt>商品展示</dt><dd><ul></ul></dd></dl></div>
+<div class="product_list" style="height:200px;"><dl><dt>商品展示</dt><dd><ul></ul></dd></dl></div>
 		<script type="text/javascript">
 			TouchSlide({ 
 				slideCell:"#news",

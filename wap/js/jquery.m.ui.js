@@ -1,4 +1,8 @@
+
 $(function($){
+
+
+	
 	$(".person").click(function()
 	{
 		if($(".warmp").hasClass("opened")){
@@ -26,5 +30,4 @@ $(function($){
 		}
 		try{$.indexResize();}catch (e){}
 	});
-
-})
+});

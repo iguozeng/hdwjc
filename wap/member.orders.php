@@ -190,7 +190,7 @@ $(function($){
                 <li><p>电话号码</p><span><input type="text" name="Tel" value='<?php echo $Tel;?>' placeholder="收货人座机电话号码"></span></li>
                 <li><p>所在地区</p>
 					<span>
-						<select id="province_select" name="ProvinceId">
+						<select id="province_select" name="ProvinceId" style="width:24%;">
 							<?php
 							$result=query("select ProvinceId,ProvinceName from province_tbl order by ProvinceId");
 							if(num_rows($result)){
@@ -202,8 +202,8 @@ $(function($){
 								$strResult.="]";
 							}?>
 						</select>
-						<select id="city_select" name="CityId"></select>
-						<select id="district_select" name="DistrictId"></select>
+						<select id="city_select" name="CityId" style="width:28%;"></select>
+						<select id="district_select" name="DistrictId" style="width:24%;"></select>
 					</span></li>
                 <li style="border:0;"><p>街道地址</p><span><input type="text" name="Address" value='<?php echo $Address;?>' placeholder="收货人详细地址，不能为空"></span></li>
             </ul>
