@@ -1,2 +1,13 @@
 @charset "gb2312";
 /**/
+.info_nav{background-color:#fff;border-bottom:3px solid #D4D3D3;}
+.info_nav .yiji_wrap{padding:2% 0;width:100%;}
+.yiji_wrap .yiji_box{width:25%;}
+.yiji_box .yiji{border-right:1px solid #E0E0E0;height:30px;text-align:center;}
+.yiji h3{font-size:16px;line-height:30px;display:inline;float:left;}
+.yiji img{display:inline;float:left;height:14px;padding-top:8px;padding-left:5px;}
+.yiji img.closing{}
+.yiji img.opening{display:none;}
+.yiji_wrap ul{}
+.yiji_wrap li{}
+.yiji_wrap li a{font-size:14px;}
