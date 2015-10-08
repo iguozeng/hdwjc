@@ -24,12 +24,34 @@
 .goods label{width:90%;padding-left:5%;text-align:center;display:block;color:#ff0000;line-height:22px;height:22px;padding:2% 0;}
 .goods .addToCart{position:absolute;right:0;bottom:0;display:block;width:30%;}
 .goods .addToCart img{width:100%;}
-/*商品详情页*/
+/*商品详情页商品预览轮播*/
 .preview{}
+.preview .bd{width:90%;margin:2% 0 2% 5%;}
+.preview .bd ul{width:100%;}
+.preview .bd li{width:100%;text-align:center;}
+.preview .bd img{height:300px;}
 .preview .hd{}
-.preview .hd li{}
+.preview .hd li{display:none;list-style:none;width:100%;text-align:center;}
+.preview .hd li.on{display:block;line-height:20px;}
 .preview .hd span{}
-.preview .bd{width:90%;margin-left:5%;}
-.preview .bd ul{}
-.preview .bd li{}
-.preview .bd img{}
+/*商品详情页商品基本信息*/
+.basic_box{background:#F8F8F8;}
+.basic_box h1{padding:3% 5%;border-bottom:1px dashed #B8B8B8;}
+.basic_box h1 a{font-size:14px;line-height:22px;}
+.basic_box .basic{height:80px;}
+.basic .price{}
+.basic .price span{}
+.basic .price label{font-size:16px;color:#ff0000;}
+.basic .amount{}
+.basic .amount span{}
+.basic .amount a{}
+.basic .amount input{}
+.basic ul{}
+.basic li{}
+.basic li.clicked{}
+.basic li.favor_clicked{}
+.basic li.thumb_clicked{}
+.basic li a{}
+.basic li img{}
+.basic li span{}
+/*商品详情页商品规格型号选择*/

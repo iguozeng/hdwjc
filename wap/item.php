@@ -11,14 +11,8 @@
 		<script src="js/TouchSlide.1.1.js"></script>
 	</head>
 	<body>
+<!--预览图轮播-->
 		<div id="preview" class="preview">
-			<div class="hd">
-				<li><span>1/5</span></li>
-				<li><span>2/5</span></li>
-				<li><span>3/5</span></li>
-				<li><span>4/5</span></li>
-				<li><span>5/5</span></li>
-			</div>
 			<div class="bd">
 				<ul>
 					<li><img src="images/[Temp]20150622161545_75468.jpg" /></li>
@@ -27,6 +21,13 @@
 					<li><img src="images/[Temp]20150622161935_46603.jpg" /></li>
 					<li><img src="images/[Temp]20150622161545_75468.jpg" /></li>
 				</ul>
+			</div>
+			<div class="hd">
+				<li><span>1/5</span></li>
+				<li><span>2/5</span></li>
+				<li><span>3/5</span></li>
+				<li><span>4/5</span></li>
+				<li><span>5/5</span></li>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -37,5 +38,20 @@
 				autoPlay:false,
 			});
 		</script>
+		<div class="basic_box">
+			<h1><a href="">开口扳手/双头开口扳手开口扳手/双头开口扳手开口扳手/双头开口扳手开口扳手/双头开口扳手</a></h1>
+			<div class="basic">
+				<div class="price"><span>￥</span><label>137</label></div>
+				<div class="amount"><span>数量</span><a href="">-</a><input type="text" name="" /><a href="">+</a></div>
+				<ul>
+					<li><a href=""><img src="images/favor.png" /></a><span>收藏</span></li>
+					<li class="clicked favor_clicked"><a href=""><img src="images/favor_clicked.png" /></a><span>取消收藏</span></li>
+					<li><a href=""><img src="images/share.png" /></a><span>分享</span></li>
+					<li><a href=""><img src="images/thumb.png" /></a><span>赞(112)</span></li>
+					<li class="clicked thumb_clicked"><a href=""><img src="images/thumb_clicked.png" /></a><span>取消赞</span></li>
+				</ul>
+			</div>
+		</div>
+<!--预览图轮播end-->
 	</body>
 </html>
