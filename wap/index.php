@@ -47,16 +47,16 @@ $global=new global_event();
 		</script>
 		<div class="cate_nav_01">
 			<ul>
-				<li><a href="list.php?sortid=5"><img src="images/cate_icon_01.png" /><span>发电机</span></a></li>
-				<li><a href="list.php?sortid=6"><img src="images/cate_icon_02.png" /><span>空压机</span></a></li>
-				<li><a href="list.php?sortid=42"><img src="images/cate_icon_03.png" /><span>电动机</span></a></li>
-				<li><a href="list.php?sortid=8"><img src="images/cate_icon_04.png" /><span>电焊机</span></a></li>
-				<li><a href="list.php?sortid=33"><img src="images/cate_icon_05.png" /><span>节能灯</span></a></li>
-				<li><a href="list.php?sortid=38"><img src="images/cate_icon_06.png" /><span>开关</span></a></li>
-				<li><a href="list.php?sortid=36"><img src="images/cate_icon_07.png" /><span>电线电缆</span></a></li>
-				<li><a href="list.php?sortid=4"><img src="images/cate_icon_08.png" /><span>法兰</span></a></li>
-				<li><a href="list.php?sortid=11"><img src="images/cate_icon_09.png" /><span>钢丝绳</span></a></li>
-				<li><a href="list.php?sortid=44"><img src="images/cate_icon_10.png" /><span>吊带</span></a></li>
+				<li><a href="goods_list.php?sortid=5"><img src="images/cate_icon_01.png" /><span>发电机</span></a></li>
+				<li><a href="goods_list.php?sortid=6"><img src="images/cate_icon_02.png" /><span>空压机</span></a></li>
+				<li><a href="goods_list.php?sortid=42"><img src="images/cate_icon_03.png" /><span>电动机</span></a></li>
+				<li><a href="goods_list.php?sortid=8"><img src="images/cate_icon_04.png" /><span>电焊机</span></a></li>
+				<li><a href="goods_list.php?sortid=33"><img src="images/cate_icon_05.png" /><span>节能灯</span></a></li>
+				<li><a href="goods_list.php?sortid=38"><img src="images/cate_icon_06.png" /><span>开关</span></a></li>
+				<li><a href="goods_list.php?sortid=36"><img src="images/cate_icon_07.png" /><span>电线电缆</span></a></li>
+				<li><a href="goods_list.php?sortid=4"><img src="images/cate_icon_08.png" /><span>法兰</span></a></li>
+				<li><a href="goods_list.php?sortid=11"><img src="images/cate_icon_09.png" /><span>钢丝绳</span></a></li>
+				<li><a href="goods_list.php?sortid=44"><img src="images/cate_icon_10.png" /><span>吊带</span></a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -392,7 +392,6 @@ $global=new global_event();
                 -->
 			</div>
 		</div>
-<div class="product_list" style="height:200px;"><dl><dt>商品展示</dt><dd><ul></ul></dd></dl></div>
 		<script type="text/javascript">
 			TouchSlide({ 
 				slideCell:"#news",

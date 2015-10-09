@@ -1,10 +1,42 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
+$page_name='ÐÂÎÅ×ÊÑ¶ÏêÇé';
+require_once 'include/init.php';
+?>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>æ— æ ‡é¢˜æ–‡æ¡£</title>
+<title>ÐÂÎÅ×ÊÑ¶ÏêÇé</title>
+<meta charset="gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<link href="css/global.css" rel="stylesheet">
+<link href="css/default.css" rel="stylesheet">
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.ui.js" type="text/javascript"></script>
+<script src="js/jquery.m.ui.js" type="text/javascript"></script>
 </head>
-
 <body>
+<div class="warmp">
+<?php require_once 'p.header.php';?>
+<div class="news_detail">
+	<div class="news_title">
+    	<img class="bg" src="images/news_title_01.jpg">
+        <h1>¶­ÊÂ³¤ÖÜ²Å±þ ²Î¼Ó¡°Ò»´øÒ»Â·¡±½¨ÉèÍÆ½ø»á</h1>
+    </div>
+    <div class="news_time">
+    	<img class="bg" src="images/news_title_02.jpg">
+        <span>2015-07-21 17:36:12 <a href="http://wap.hdwjc.com/">»ª¶«Îå½ðÍø</a></span>
+    </div>
+    <div class="news_column">
+    	7ÔÂ15ÈÕÖÁ16ÈÕ£¬½­ËÕÃñÓªÆóÒµ²ÎÓë¡°Ò»´øÒ»Â·¡±½¨ÉèÍÆ½ø»áÔÚÁ¬ÔÆ¸ÛÊÐÕÙ¿ª£¬À´×ÔÈ«Ê¡¸÷µØµÄ½ü¶þ°ÙÃûÆóÒµ¼ÒÆë¾ÛÁ¬ÔÆ¸ÛÊÐ£¬¾Û½¹¡°Ò»´øÒ»Â·¡±½»»ãµã½¨Éè£¬¹²»°½»Á÷ºÏ×÷£¬Ì½Ñ°·¢Õ¹ÉÌ»ú¡£Ê¡Î¯³£Î¯¡¢¸±Ê¡³¤ÐìÃù£¬Ê¡ÈË´ó³£Î¯»á¸±Ö÷ÈÎ¡¢Ê¡¹¤ÉÌÁªÖ÷Ï¯ÐíÖÙè÷³öÏ¯»áÒé²¢½²»°£¬Á¬ÔÆ¸ÛÊÐÎ¯Êé¼Ç¡¢ÊÐÈË´ó³£Î¯»áÖ÷ÈÎÑîÊ¡ÊÀµ½»áÖÂ´Ç£¬Ê¡Î¯Í³Õ½²¿¸±²¿³¤¡¢Ê¡¹¤ÉÌÁªµ³×éÊé¼ÇÑîÓÂÖ÷³Ö»áÒé£¬ÊÐÁìµ¼ÕÔÏþ½­¡¢ÖÙçû¡¢²ÜÓÀÁÖ¡¢¶­Ë¡¾ê¡¢Ðì¼Ò±£¡¢Íõ¶«Éý²Î¼Ó»î¶¯¡£½­ËÕÊ¡¹¤ÉÌÁªÎå½ð»úµçÉÌ»á»á³¤¡¢»ª¶«Îå½ð³Ç¶­ÊÂ³¤ÖÜ²Å±þ²Î¼ÓÁË»áÒé¡£
+	<img src="images/[temp]_01.jpg">        ÔÚ·ÖÎöµ±Ç°¹ú¼Ê¹úÄÚÐÎÊÆºÍÉîÈë½â¶Á¹ú¼Ò¡°Ò»´øÒ»Â·¡±Õ½ÂÔºó£¬ÆóÒµµÄ¹ú¼Ê»¯£¬¾ß±¸È«ÇòÊÓÒ°£¬Ãé×¼¹ú¼ÊÊÐ³¡£¬²ÉÓÃ¹ú¼Ê±ê×¼£¬×ÅÑÛÈ«ÊÀ½çÑ°ÕÒ×î¼Ñ×ÊÔ´£¬ÍÚ¾ò¸ß¶ËÈË²Å£¬ÕÒ×¼ÆóÒµÔÚÈ«Çò¼ÛÖµÁ´ÖÐµÄ¶¨Î»£¬ÖÂÁ¦ÓÚÏò¼ÛÖµÁ´µÄ¸ß¶ËÅÊÉý¡£Òª×¢ÖØÆóÒµµÄ¿Æ¼¼»¯£¬»ý¼«×·ËæÐÂ¼¼Êõ¸ïÃüµÄ³±Á÷£¬ÕÒ×¼ÐÐÒµ·¢Õ¹·½Ïò£¬ÖÂÁ¦ÓÚ¿Æ¼¼½ø²½¡£
+    </div>
+</div>
+<div class="weixin_qrcode">
+	
+</div>
+<?php require_once 'slides.php';?>
+<?php require_once 'p.footer.php';?>
+</div>
 </body>
 </html>
