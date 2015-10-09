@@ -41,9 +41,9 @@
 		<div class="basic_box">
 			<h1><a href="">开口扳手/双头开口扳手开口扳手/双头开口扳手开口扳手/双头开口扳手开口扳手/双头开口扳手</a></h1>
 			<div class="basic">
-				<div class="price"><span>￥</span><label>137</label></div>
-				<div class="amount"><span>数量</span><a href="">-</a><input type="text" name="" /><a href="">+</a></div>
-				<ul>
+				<div class="price fl"><span>￥</span><label>137</label></div>
+				<div class="amount fl"><span>数量</span><a href="" class="non-clickable">-</a><input type="text" name="" value="1" /><a href="" class="clickable">+</a></div>
+				<ul class="fr">
 					<li><a href=""><img src="images/favor.png" /></a><span>收藏</span></li>
 					<li class="clicked favor_clicked"><a href=""><img src="images/favor_clicked.png" /></a><span>取消收藏</span></li>
 					<li><a href=""><img src="images/share.png" /></a><span>分享</span></li>

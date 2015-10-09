@@ -38,20 +38,22 @@
 .basic_box{background:#F8F8F8;}
 .basic_box h1{padding:3% 5%;border-bottom:1px dashed #B8B8B8;}
 .basic_box h1 a{font-size:14px;line-height:22px;}
-.basic_box .basic{height:80px;}
-.basic .price{}
+.basic_box .basic{height:40px;padding:15px 0;}
+.basic .price{width:80px;line-height:32px;margin-left:8px;}
 .basic .price span{}
-.basic .price label{font-size:16px;color:#ff0000;}
+.basic .price label{font-size:20px;color:#ff0000;}
 .basic .amount{}
-.basic .amount span{}
-.basic .amount a{}
-.basic .amount input{}
-.basic ul{}
-.basic li{}
-.basic li.clicked{}
+.basic .amount span{margin-right:5px;}
+.basic .amount a{border:1px solid #CACACA;display:inline-block;width:28px;height:30px;text-align:center;line-height:30px;font-size:16px;}
+.basic .amount a.non-clickable{color:#d7d7d7;}
+.basic .amount a.clickable{color:#6f6f6f;}
+.basic .amount input{border:1px solid #CACACA;width:40px;height:30px;text-align:center;line-height:30px;margin:0 4px;font-size:16px;}
+.basic ul{border-left:1px solid #CDCDCD;}
+.basic li{float:left;}
+.basic li.clicked{display:none;}
 .basic li.favor_clicked{}
 .basic li.thumb_clicked{}
-.basic li a{}
-.basic li img{}
-.basic li span{}
+.basic li a{width:40px;display:block;}
+.basic li img{width:20px;height:20px;display:block;margin:0 auto;}
+.basic li span{font-size:8px;display:block;width:40px;text-align:center;line-height:16px;}
 /*商品详情页商品规格型号选择*/
