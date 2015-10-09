@@ -220,15 +220,22 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .orders_list li em{background-color:#C03E40;color:#fff;display:block;height:25px;line-height:25px;width:25px;font-style:normal;position:absolute;border-radius:12px;right:3px;top:5px;text-align:center;z-index:990;font-size:16px;cursor:pointer;}
 
 /* 新闻资讯详情 */
-.news_detail{ padding:45px 0 60px 0;clear:both; background:#fff; overflow:hidden;}
+.news_detail{ padding:45px 0 20px 0;clear:both; background:#fff; overflow:hidden;}
 .news_title{ position:relative;}
 .news_title h1{ position:absolute;display:block; bottom:0;left:20%;width:70%; font-weight:bold; overflow:hidden; font-size:1.2em;}
 .news_time{ position:relative}
 .news_time span{ position:absolute; bottom:0; left:23%; height:20px; line-height:20px; width:60%; font-size:1em; overflow:hidden; color:#666;}
 .news_time span a{ color:#00F;}
 .news_column{ clear:both; width:82%; padding:10px 5% 0 5%; border-left:solid 1px #A2A2A2; float:right; }
-.news_column img{ width:95%; margin:0 auto; display:block;}
-.weixin_qrcode{ clear:both; width:95%; padding:10px 0 10px 0;}
+.news_column img{ width:98%; margin:0 auto; display:block;}
+.weixin_qrcode{ clear:both; width:90%; margin:0 auto; padding:20px 0 10px 0; background:#F4F4F4; border:solid 1px #B8B8B8; overflow:hidden; text-align:center;}
+.weixin_qrcode img{ display:block; width:50%; height:auto; margin-bottom:10px; margin:0 auto;}
+.weixin_qrcode span{ height:30px; line-height:30px; font-size:1.3em;}
+.news_links{ clear:both; margin-top:20px; padding-bottom:70px;}
+.news_links_title{ position:relative;}
+.news_links_title span{ position:absolute; top:0; left:16%; color:#fff;}
+.news_links_column{ clear:both; padding:10px 0 30px 0;}
+.news_links_column li{ display:block; width:88%; height:30px; line-height:30px; margin:0 auto; margin-bottom:5px; background:#E9EAEA; padding-left:5px; border-left:solid 3px #457CE6; overflow:hidden;}
 
 @media screen and (min-width:320px) {
 .array_title span{font-size:1.1em;}
@@ -253,6 +260,10 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 
 .news_title h1{ height:14px; line-height:14px;font-size:0.8em;}
 
+.weixin_qrcode span{ font-size:1em;}
+
+.news_links_title span{ position:absolute; top:0; left:11%; height:35px; line-height:35px; color:#fff;}
+
 }
 
 
@@ -272,6 +283,10 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .bought_cart_array li div span{ height:20px; line-height:20px; font-size:1em; }
 
 .news_title h1{ height:16px; line-height:16px;font-size:1em;}
+
+.weixin_qrcode span{ font-size:1.3em;}
+
+.news_links_title span{ position:absolute; top:0; left:13%; height:33px; line-height:33px; color:#fff; font-size:1.2em;}
 
 }
 
@@ -293,4 +308,6 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .bought_cart_array li div span{ height:25px; line-height:25px; font-size:1em; color:#666;}
 
 .news_title h1{ height:22px;line-height:22px;font-size:1.2em;}
+
+.news_links_title span{ left:12%; height:35px; line-height:35px;}
 }
