@@ -13,6 +13,7 @@ $strPage=str2int($_POST['page']);
 if($strAction=='get_product')echo event_get_product($strProductSortid,$strProductMainSortid,$strSartNum,$strNum);
 if($strAction=='get_list_product')echo event_get_list_product($strProductSortid,$strProductMainSortid,$strNum,$strPage);
 if($strAction=='get_list_news')echo event_get_list_news($strNewsSortid,$strNewsMainSortid,$strNum,$strPage);
+
 function event_get_product($sortid,$mainsortid=0,$sartnum=0,$num=20){
 	$strResult='';
 	if($sortid>0)

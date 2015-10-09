@@ -1,5 +1,6 @@
 <?php
 $page_name='积分累计';
+require_once 'include/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -18,26 +19,13 @@ $page_name='积分累计';
 <?php require_once 'p.header.php';?>
 <div class="points_array">
 	<ul>
-        <li>
-            <strong>注册新会员[移动端]</strong>
-            <span>1点 产生：2015-09-12 截止：2015-12-11</span>
-        </li>
-        <li>
-            <strong>注册新会员[移动端]</strong>
-            <span>1点 产生：2015-09-12 截止：2015-12-11</span>
-        </li>
-        <li>
-            <strong>注册新会员[移动端]</strong>
-            <span>1点 产生：2015-09-12 截止：2015-12-11</span>
-        </li>
-        <li>
-            <strong>注册新会员[移动端]</strong>
-            <span>1点 产生：2015-09-12 截止：2015-12-11</span>
-        </li>
-        <li>
-            <strong>注册新会员[移动端]</strong>
-            <span>1点 产生：2015-09-12 截止：2015-12-11</span>
-        </li>
+	<?php	
+		$result=query("select LinkOrderId,Points,Remark,AddTime,ExpireTime from points_log_tbl where MemberId='$MemberId' order by AddTime desc limit 50");
+		while($row=fetch_array($result))
+		{
+		echo'<li><strong>'.$row['Remark'].'</strong><span>'.$row['Points'].'点，'.$row['LinkOrderId'].'，产生：'.format_dt($row['AddTime'],'%Y-%m-%d').'，截止：'.format_dt($row['ExpireTime'],'%Y-%m-%d').'</span></li>';
+		}
+	?>
     </ul>
 
 </div>

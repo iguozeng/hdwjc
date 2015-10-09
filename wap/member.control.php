@@ -1,5 +1,8 @@
 <?php
 $page_name='个人中心';
+require_once 'include/init.php';
+require_once YXS.'global.class.php';
+require_once YXS.'check.member.php';
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -19,9 +22,18 @@ $page_name='个人中心';
 <div class="info_profile">
 	<img src="images/profile_bg.jpg" class="bg">
     <div class="top_profile">
-    	<strong>五金网会员<label>VIP</label></strong>
-        <span>注册时间：2015-03-26</span>
-        <span>积分 0</span>
+	<?php
+		$result=query("select MemberName,RegDatetime,Points from member_tbl where MemberId='$MemberId';");
+		if(num_rows($result)){
+			$row=fetch_array($result);
+			$MemberName=$row[0];
+			$RegTime=$row[1];
+			$Points=$row[2];
+		}
+	?>
+    	<strong><?php echo $MemberName;?><label>VIP</label></strong>
+        <span>注册时间：<?php echo format_dt($RegTime,'%Y-%m-%d');?></span>
+        <span>积分 <?php echo $Points;?></span>
     </div>
 </div>
 <div class="count_array">

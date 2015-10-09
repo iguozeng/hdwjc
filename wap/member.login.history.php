@@ -1,5 +1,7 @@
 <?php
 $page_name='登录历史';
+require_once 'include/init.php';
+require_once YXS.'check.member.php';
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -18,9 +20,13 @@ $page_name='登录历史';
 <?php require_once 'p.header.php';?>
 <div class="log_array">
     <ul>
-        <li><label>2015-10-06 13:23</label><span>会员登录系统[移动端]</span></li>
-        <li><label>2015-10-06 09:58</label><span>会员登录系统[移动端]</span></li>
-        <li><label>2015-10-06 09:52</label><span>会员登录系统[移动端]</span></li>
+	<?php	
+$result=query("select DateTime,Content from member_log_tbl where MemberId='$MemberId' order by DateTime desc limit 50");
+while($rows=fetch_array($result))
+{
+echo'<li><label>'.format_dt($rows[0],'%Y-%m-%d %H:%M').'</label><span>'.$rows[1].'</span></li>';
+}
+?>
     </ul>
 </div>
 

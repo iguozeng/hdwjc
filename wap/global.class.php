@@ -93,13 +93,13 @@ class global_event{
 	public function get_slides()
 	{
 		$str='<div class="slides">
-				<dl>
-				<dt><a href="member.control.php">会员操作中心</a></dt>
-				<dd><ul>
-				<li><a href="m_cart.php">购物车</a></li><li><a href="m_member.order.list.php">订单查询</a></li><li><a href="m_member.bought.php">已购商品</a></li><li><a href="m_member.pay.php?type=free&num=100">在线充值</a></li><li><a  href="m_member.deposit.php">预存余额</a></li><li><a href="m_member.account.php">历史账单</a></li><li><a href="m_member.points.php">积分累计</a></li><li><a href="m_member.profile.php">档案修改</a></li><!--li><a href="m_member.password.php">密码修改</a></li--><li><a href="m_member.login.history.php">登录历史</a></li><li><a href="m_member.login.out.php">刷新登录</a></li><!--li><a href="pay_lib/api/wxpay/">支付测试</a></li-->
-				</ul></dd>
-				</dl>
-			</div>';
+			<dl>
+			<dt><a href="member.control.php">会员操作中心</a></dt>
+			<dd><ul>
+			<li><a href="cart.php">购物车</a></li><li><a href="member.order.list.php">订单查询</a></li><li><a href="member.bought.php">已购商品</a></li><li><a href="member.pay.php?type=free&num=100">在线充值</a></li><li><a  href="member.deposit.php">预存余额</a></li><li><a href="member.account.php">历史账单</a></li><li><a href="member.points.php">积分累计</a></li><li><a href="member.profile.php">档案修改</a></li><li><a href="member.login.history.php">登录历史</a></li><li><a href="member.login.out.php">刷新登录</a></li>
+			</ul></dd>
+			</dl>
+		</div>';
 		return $str;
 	}
 	
@@ -123,5 +123,75 @@ class global_event{
 		}
 		return $str;
 	}
+	
+	function event_get_product($sortid,$mainsortid=0,$sartnum=0,$num=20,$flag=1){
+	$strResult='';
+	if($sortid>0)
+	{
+		if($sortid==$mainsortid)
+		{
+			$strSQL="select p.ProductId,p.Code,p.Name,p.Type,p.RootPic,p.SalePrice,(select BrandName from brand_class_tbl where BrandId=p.BrandId limit 1) as BrandName,(select LocalityName from locality_class_tbl where LocalityId=p.LocalityId limit 1) as LocalityName,(select a.SalePrice from product_inventory_tbl a,inventory_class_tbl b where (a.InventoryClassId=b.InventoryClassId and b.IsDiscount=1 and a.InvTotal>0) and a.ProductId=p.ProductId limit 1) as DiscountSalePrice,(select ShoppingId from shopping_tbl where AgentId=p.AgentId limit 1) as ShoppingId,(select Name from shopping_tbl where AgentId=p.AgentId limit 1) as ShoppingName from product_tbl p where p.MianProductClassId='$sortid' order by p.ProductId desc limit $sartnum,$num";
+		}else{
+			$strSQL="select p.ProductId,p.Code,p.Name,p.Type,p.RootPic,p.SalePrice,(select BrandName from brand_class_tbl where BrandId=p.BrandId limit 1) as BrandName,(select LocalityName from locality_class_tbl where LocalityId=p.LocalityId limit 1) as LocalityName,(select a.SalePrice from product_inventory_tbl a,inventory_class_tbl b where (a.InventoryClassId=b.InventoryClassId and b.IsDiscount=1 and a.InvTotal>0) and a.ProductId=p.ProductId limit 1) as DiscountSalePrice,(select ShoppingId from shopping_tbl where AgentId=p.AgentId limit 1) as ShoppingId,(select Name from shopping_tbl where AgentId=p.AgentId limit 1) as ShoppingName from product_array_tbl z,product_tbl p where z.ProductId=p.ProductId and z.ProductClassId='$sortid' order by p.ProductId desc limit $sartnum,$num";
+		}
+	}else{
+		$strSQL="select p.ProductId,p.Code,p.Name,p.Type,p.RootPic,p.SalePrice,(select BrandName from brand_class_tbl where BrandId=p.BrandId limit 1) as BrandName,(select LocalityName from locality_class_tbl where LocalityId=p.LocalityId limit 1) as LocalityName,(select a.SalePrice from product_inventory_tbl a,inventory_class_tbl b where (a.InventoryClassId=b.InventoryClassId and b.IsDiscount=1 and a.InvTotal>0) and a.ProductId=p.ProductId limit 1) as DiscountSalePrice,(select ShoppingId from shopping_tbl where AgentId=p.AgentId limit 1) as ShoppingId,(select Name from shopping_tbl where AgentId=p.AgentId limit 1) as ShoppingName from product_tbl p order by p.ProductId desc limit $sartnum,$num";
+	}
+	$result=query($strSQL);
+	$i=1;
+	while($row=fetch_array($result))
+	{
+		$ProductId=$row["ProductId"];
+		$ProductCode=$row["Code"];
+		if(!isnull($row["LocalityName"]))$ProductLocalityName=$row["LocalityName"].',';
+		$ProductBrandName=$row["BrandName"];
+		$ProductType=$row["Type"];
+		$ProductName=$row["Name"];
+		$ProductSalePrice=str2int($row["SalePrice"],2);
+		$ProductDiscountSalePrice=str2int($row["DiscountSalePrice"],2);
+		$ShoppingId=$row["ShoppingId"];
+		$ShoppingName=str_mod($row["ShoppingName"],40,38);
+		if($ProductDiscountSalePrice>0){
+			$strSalePrice='<span>供货价:<font>￥'.$ProductSalePrice.'</font></span><span>特惠价:<label>￥'.$ProductDiscountSalePrice.'</label></span>';
+		}else{
+			$strSalePrice='<span>供货价:<label>￥'.$ProductSalePrice.'</label></span>';
+		}
+		$hasPrice=false;
+		if($ProductSalePrice>0)$hasPrice=true;
+		if($ProductDiscountSalePrice>0)$hasPrice=true;
+		if(!$hasPrice)$strSalePrice='<span>供货价:<label class="call_price">在线询价</label></span>';
+		if($i%2==0)
+		{
+			$str_style=' f_right_';
+		}else{
+			$str_style=' f_left_';
+		}
+		$strSalePrice=iconv("utf-8","gbk",$strSalePrice);
+		if($flag==1){
+		$strResult.='
+		<li class="fl wrapper">
+					<img class="bg" src="images/tuijian_bg.jpg" />
+					<div class="tuijian_pic"><img src="'.get_img($row["RootPic"]).'" /></div>
+					<div class="tuijian_name"><a href="product.item.php?num='.$ProductCode.'">'.$ProductName.'</a></div>
+					<div class="tuijian_price"><label>￥'.$ProductSalePrice.'</label></div>
+					<div class="tuijian_btn"><a href="product.item.php?num='.$ProductCode.'"><img src="images/tuijian_btn.png" /></a></div>
+		</li>';}else{
+		$strResult.='<li class="fl">
+				<a href="product.item.php?num='.$ProductCode.'" class="tehui_goods">
+					<img class="tehui_pic" src="'.get_img($row["RootPic"]).'" />
+					<span class="tehui_name">'.$ProductName.'</span>
+				</a>
+				<div class="tehui_purchase wrapper txt_wrapper">
+					<img class="bg" src="images/index_price_bg.png" />
+					<span class="tehui_price txtXS">￥'.$ProductSalePrice.'</span>
+					<a class="tehui_btn txtXS" href="product.item.php?num='.$ProductCode.'">立即购买</a>
+				</div>
+			</li>';
+		}
+		$i++;
+	}
+	return $strResult;
+}
+	
 }
 ?>

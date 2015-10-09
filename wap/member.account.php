@@ -1,5 +1,6 @@
 <?php
 $page_name='历史账单';
+require_once 'include/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -18,30 +19,14 @@ $page_name='历史账单';
 <?php require_once 'p.header.php';?>
 <div class="account_array">
             <ul>
-            	<li>
-                    <strong>预存余额扣除</strong>
-                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
-                </li>
-				<li>
-                    <strong>预存余额扣除</strong>
-                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
-                </li>
-                <li>
-                    <strong>预存余额扣除</strong>
-                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
-                </li>
-                <li>
-                    <strong>预存余额扣除</strong>
-                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
-                </li>
-                <li>
-                    <strong>预存余额扣除</strong>
-                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
-                </li>
-                <li>
-                    <strong>预存余额扣除</strong>
-                    <span>金额：0.01，MXSO0000000105，产生时期：2015-09-23</span>
-                </li>
+			<?php	
+				$result=query("select AddTime,LinkOrderId,Remark,OutAmount from running_account_tbl where OutAmount>0 and MemberId='$MemberId' $strWhere order by AddTime desc limit 50");
+				while($row=fetch_array($result))
+				{
+				echo'<li><strong>'.$row['Remark'].'</strong><span>金额：'.$row['OutAmount'].'，'.$row['LinkOrderId'].'，产生时期：'.format_dt($row['AddTime'],'%Y-%m-%d').'</span></li>';
+				}
+			?>
+            	
             </ul>
         </div>
 

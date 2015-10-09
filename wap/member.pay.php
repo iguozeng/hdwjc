@@ -21,7 +21,7 @@ $page_name='在线支付';
     <dl>
         <dt>支付接口</dt>
         <dd>
-            <ul><li class="selected"><a href="">支付宝</a></li></ul>
+            <ul><li class="selected"><a href="m_member.pay.php?action=&type=free&order=&id=9">支付宝</a></li></ul>
         </dd>
     </dl>
     </div>
@@ -29,7 +29,7 @@ $page_name='在线支付';
     <div class="pay_array">
         <div class="pay_num">
         <span>支付金额：<strong>￥100</strong></span>
-        <font><label>充值人：xxx</label><label>类型：充值订单</label></font>
+        <font><label>充值人：张华芳</label><label>类型：充值订单</label></font>
     </div>
     <div class="pay_cmf">确认无误后转向支付宝付款</div>
         <label><input type="submit" class="send_post" value="去支付宝支付"></label>

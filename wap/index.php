@@ -15,7 +15,7 @@ $global=new global_event();
 <script language="javascript">var idPage="index";</script>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/TouchSlide.1.1.js"></script>
-<script src="js/jquery.m.ui.js"></script>
+
 </head>
 <body>
 <!--头部、焦点图及导航-->
@@ -70,6 +70,8 @@ $global=new global_event();
 		</div>
 		<div class="tehui">
 			<ul>
+            <?php echo $global->event_get_product(2,0,0,6,2); ?>
+            <!--
 				<li class="fl">
 					<a href="" class="tehui_goods">
 						<img class="tehui_pic" src="images/[Temp]20150622104444_40075.jpg" />
@@ -136,6 +138,7 @@ $global=new global_event();
 						<a class="tehui_btn txtXS" href="">立即购买</a>
 					</div>
 				</li>
+                -->
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -170,6 +173,8 @@ $global=new global_event();
 		</div>
 		<div class="tuijian">
 			<ul>
+            	<?php echo $global->event_get_product(1,0,0,6,1); ?>
+            	<!--
 				<li class="fl wrapper">
 					<img class="bg" src="images/tuijian_bg.jpg" />
 					<div class="tuijian_pic"><img src="images/[Temp]20150622104444_40075.jpg" /></div>
@@ -212,6 +217,7 @@ $global=new global_event();
 					<div class="tuijian_price"><label>￥13.50</label></div>
 					<div class="tuijian_btn"><a href=""><img src="images/tuijian_btn.png" /></a></div>
 				</li>
+                -->
 				<div class="clear"></div>
 			</ul>
 		</div>
