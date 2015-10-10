@@ -46,7 +46,7 @@ if($HasData){
 	$IsRehref=false;
 	if($SendClassId==0)$IsRehref=true;
 	if($PayClassId==0)$IsRehref=true;
-	if($IsRehref)header("Location:m_member.orders.php?id=".base64_encode($OrderId));
+	if($IsRehref)header("Location:member.orders.php?id=".base64_encode($OrderId));
 	$result=query("select InvoiceHead,InvoiceContent,AddTime from invoice_tbl where MemberId='$MemberId' and OrderIds in('$OrderId')");
 	if(num_rows($result)){$row=fetch_array($result);$InvoiceHead=$row[0];$InvoiceContent=$row[1];$InvoiceAddTime=$row[2];}
 	if(str2int($ShoppingId)){$strShoppingLink='；<span>由(<a href="/shopping/?id='.$ShoppingId.'" target="_blank" class="sname">'.$ShoppingName.'</a>)提供服务<span>';}else{$strShoppingLink='，相关服务由'.SiteName.'提供';}
