@@ -165,7 +165,9 @@ $(function($){
 <body>
 <div class="warmp">
 <?php require_once 'p.header.php';?>
-<form action="" method="post">
+<form action="member.pay.php"  name="orderform" method="post">
+<input type="hidden" name="action" value="apply" />
+<input type="hidden" name="order" value="<?php echo $OrderIds;?>" />
 <div class="address_array">
 	<dl>
     	<dt>收货人信息</dt>
@@ -277,8 +279,8 @@ foreach($Array_OrderId as $OrderId){
 
 <?php require_once 'slides.php';?>
 <div class="action_buy">
-	<input type="button" class="buy_button" value="结 算">
-    <span>合计金额：&yen; 213.00</span>
+	<input type="submit" class="buy_button" value="结 算">
+    <span>合计金额：&yen; <?php echo str2int($all_amount,2);?></span>
 </div>
 </form>
 <?php require_once 'p.footer.php';?>
