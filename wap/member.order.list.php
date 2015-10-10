@@ -102,7 +102,7 @@ if($total>0)
             </div>
             <div class="array_column">
             	<strong>
-                	<span>¶©µ¥±àºÅ£º<a href="m_member.order.detail.php?OrderId='.$rows[0].'">'.$rows[0].'</a></span>
+                	<span>¶©µ¥±àºÅ£º<a href="member.order.detail.php?OrderId='.$rows[0].'">'.$rows[0].'</a></span>
                 	<label>×Ü¶î£º<em>&yen;'.str2int($rows['TotalAmount'],2).'</em></label>
                 </strong>
                 <span class="status">¶©µ¥×´Ì¬£º'.$strPayed.'</span>
