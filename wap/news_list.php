@@ -111,7 +111,7 @@ if(!isnull($ArcitleSortName))
 </div>
 <div class="info_list">
 	<ul>
-
+    	<!--
 		<li>
 			<div class="info_pic fl"><a href=""><img src="images/[Temp]20150804154656_32462.jpg" /></a></div>
 			<div class="info_txt fl info_txt1">
@@ -133,7 +133,7 @@ if(!isnull($ArcitleSortName))
 			<div class="info_right fl"><a href=""><img src="images/info_list_03.png" /></a></div>
 			<div class="clear"></div>
 		</li>
-
+        -->
 	</ul>
     <div class="more">正在加载更多内容...</div>
 </div>
