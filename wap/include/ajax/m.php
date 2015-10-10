@@ -42,14 +42,14 @@ function event_get_product($sortid,$mainsortid=0,$sartnum=0,$num=20){
 		$ShoppingId=$row["ShoppingId"];
 		$ShoppingName=str_mod($row["ShoppingName"],40,38);
 		if($ProductDiscountSalePrice>0){
-			$strSalePrice='<span>ä¾›è´§ä»·:<font>ï¿¥'.$ProductSalePrice.'</font></span><span>ç‰¹æƒ ä»·:<label>ï¿¥'.$ProductDiscountSalePrice.'</label></span>';
+			$strSalePrice='<span>¹©»õ¼Û:<font>£¤'.$ProductSalePrice.'</font></span><span>ÌØ»Ý¼Û:<label>£¤'.$ProductDiscountSalePrice.'</label></span>';
 		}else{
-			$strSalePrice='<span>ä¾›è´§ä»·:<label>ï¿¥'.$ProductSalePrice.'</label></span>';
+			$strSalePrice='<span>¹©»õ¼Û:<label>£¤'.$ProductSalePrice.'</label></span>';
 		}
 		$hasPrice=false;
 		if($ProductSalePrice>0)$hasPrice=true;
 		if($ProductDiscountSalePrice>0)$hasPrice=true;
-		if(!$hasPrice)$strSalePrice='<span>ä¾›è´§ä»·:<label class="call_price">åœ¨çº¿è¯¢ä»·</label></span>';
+		if(!$hasPrice)$strSalePrice='<span>¹©»õ¼Û:<label class="call_price">ÔÚÏßÑ¯¼Û</label></span>';
 		if($i%2==0)
 		{
 			$str_style=' f_right_';
@@ -97,14 +97,14 @@ function event_get_list_product($sortid,$mainsortid=0,$num=10,$page=0){
 		$ShoppingId=$row["ShoppingId"];
 		$ShoppingName=str_mod($row["ShoppingName"],40,38);
 		if($ProductDiscountSalePrice>0){
-			$strSalePrice='<span>ä¾›è´§ä»·:<font>ï¿¥'.$ProductSalePrice.'</font></span><span>ç‰¹æƒ ä»·:<label>ï¿¥'.$ProductDiscountSalePrice.'</label></span>';
+			$strSalePrice='<span>¹©»õ¼Û:<font>£¤'.$ProductSalePrice.'</font></span><span>ÌØ»Ý¼Û:<label>£¤'.$ProductDiscountSalePrice.'</label></span>';
 		}else{
-			$strSalePrice='<span>ä¾›è´§ä»·:<label>ï¿¥'.$ProductSalePrice.'</label></span>';
+			$strSalePrice='<span>¹©»õ¼Û:<label>£¤'.$ProductSalePrice.'</label></span>';
 		}
 		$hasPrice=false;
 		if($ProductSalePrice>0)$hasPrice=true;
 		if($ProductDiscountSalePrice>0)$hasPrice=true;
-		if(!$hasPrice)$strSalePrice='<span>ä¾›è´§ä»·:<label class="call_price">åœ¨çº¿è¯¢ä»·</label></span>';
+		if(!$hasPrice)$strSalePrice='<span>¹©»õ¼Û:<label class="call_price">ÔÚÏßÑ¯¼Û</label></span>';
 		if($i%2==0)
 		{
 			$str_style=' f_right_';
@@ -112,10 +112,11 @@ function event_get_list_product($sortid,$mainsortid=0,$num=10,$page=0){
 			$str_style=' f_left_';
 		}
 		$strSalePrice=iconv("utf-8","gbk",$strSalePrice);
-		$strResult.='<li><a href="product.item.php?num='.$ProductCode.'">
-        <p class="item_intro"><em>'.$ProductName.'</em><strong>'.$strSalePrice.'</strong><font>'.$ProductLocalityName.$ProductBrandName.$ProductType.'</font></p>
-        <p class="item_img"><img src="'.get_img($row["RootPic"]).'" /></p>
-        <p class="item_shopping">'.$ShoppingName.'</p></a>
+		$strResult.='<li>
+		<a class="goods_name" href="">'.$ProductName.'</a>
+					<a class="good_pic" href=""><img src="'.get_img($row["RootPic"]).'" /></a>
+					<label>£¤'.$ProductSalePrice.'</label>
+					<a class="addToCart" href=""><img src="images/addToCart.png" /></a>
         </li>';
 		$i++;
 	}
@@ -143,23 +144,36 @@ function event_get_list_news($sortid,$mainsortid=0,$num=10,$page=0){
 	{
 		$ArcitleId=$row["ArcitleId"];
 		$strTitle=$row["Title"];
-		$strSpc=iconv("utf-8","gbk",'ã€€');
+		$strSpc=iconv("utf-8","gbk",'¡¡');
 		$strContent=str_dehtml($row["Content"]);
 		$strContent=str_ireplace(array("\r\n", "\r", "\n", $strSpc),"",$strContent);
 		$strContent=str_left(strip_tags($strContent),280);
 		if($row["DateTime"]>0)$strDateTime=format_dt($row["DateTime"],'%Y-%m-%d');
 		if(ex_file($row["RootPic"])){
-			$strPic='<p class="news_list_img"><img src="'.get_img($row["RootPic"]).'" /></p>';
-			$strStyle='';
+			$strResult.='<li>
+			<div class="info_pic fl"><a href="news_detail.php?id='.$ArcitleId.'"><img src="'.get_img($row["RootPic"]).'" /></a></div>
+			<div class="info_txt fl info_txt1">
+				<a href="news_detail.php?id='.$ArcitleId.'">'.$strTitle.'</a>
+				<span class="info_detail">
+					<span class="pubdate">'.$strDateTime.'</span><span class="info_intro">'.$strContent.'</span>
+				</span>
+			</div>
+			<div class="info_right fl"><a href="news_detail.php?id='.$ArcitleId.'"><img src="images/info_list_03.png" /></a></div>
+			<div class="clear"></div>
+			</li>';
 		}else{
-			$strPic='';
-			$strStyle=' class="noImg"';
+			$strResult.='<li>
+			<div class="info_txt fl info_txt2">
+				<a href="news_detail.php?id='.$ArcitleId.'">'.$strTitle.'</a>
+				<span class="info_detail">
+					<span class="pubdate">'.$strDateTime.'</span><span class="info_intro">'.$strContent.'</span>
+				</span>
+			</div>
+			<div class="info_right fl"><a href="news_detail.php?id='.$ArcitleId.'"><img src="images/info_list_03.png" /></a></div>
+			<div class="clear"></div>
+			</li>';
 		}
-		$strResult.='<li'.$strStyle.'><a href="news.detail.php?id='.str_url_encode($ArcitleId).'">
-        <p class="news_list_intro"><font>'.$strDateTime.'</font><span>'.$strContent.'</span></p>
-        '.$strPic.'
-        <p class="news_list_title">'.$strTitle.'</p></a>
-        </li>';
+		
 		$i++;
 	}
 	return $strResult;

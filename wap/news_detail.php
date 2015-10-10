@@ -66,6 +66,7 @@ $page_title=$Title.' - '.$page_title;
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 <link href="css/global.css" rel="stylesheet">
 <link href="css/default.css" rel="stylesheet">
+<script language="javascript">var idPage="news";</script>
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="js/jquery.m.ui.js" type="text/javascript"></script>
 </head>
