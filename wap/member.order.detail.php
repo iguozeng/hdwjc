@@ -60,7 +60,7 @@ if($HasData){
 		$strPayed='&nbsp;√&nbsp;已支付';
 	}else{
 		$strPayed='&nbsp;×&nbsp;未支付';
-		if(($IsOnlinePay==1)&&$isDel)$strOnlLink='&nbsp;-&nbsp;<a href="/pay_lib/pay.php?action=exec_pay&order='.base64_encode($OrderId).'" target="_blank">确认支付</a>';
+		if(($IsOnlinePay==1)&&$isDel)$strOnlLink='&nbsp;-&nbsp;<a href="member.pay.php?action=apply&order='.base64_encode($OrderId).'" target="_blank">确认支付</a>';
 	}
 	if($Sended==1)
 	{
