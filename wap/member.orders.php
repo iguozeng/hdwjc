@@ -5,6 +5,7 @@ require_once 'include/init.php';
 $strAction=$_POST['action'];
 if($strAction=='del')event_del_cart();
 if($strAction=='edit')event_edit_cart();
+if($action=='edit_cart')event_edit_order_num($type,$tid,$total,$order);
 if($strAction=='send')event_send_cart();
 function event_del_cart(){
 	$errnum=false;
@@ -49,6 +50,35 @@ function event_edit_cart(){
 	header("Location:cart.php");
 	return false;	
 };
+
+function event_edit_order_num($type,$tid,$total,$order){
+	$errnum=false;
+	$UserId=str2int($_SESSION["MemberId"]);
+	if($UserId>0){
+		$IsRegisterUser=1;
+		$UserName=$_SESSION['MemberName'];
+	}else{
+		$IsRegisterUser=0;
+		$UserName=$_COOKIE['UserName'];
+	}
+	if($type=='reduction')
+	{
+		$total--;
+		if($total<1)$total=1;
+	}
+	else{
+		$total++;
+	}
+	$result=query("select Total,ProductId from sale_order_detail_tbl where DetailId='$tid';");
+	if(num_rows($result)){$row=fetch_array($result);$ProductId=$row[1];}else{$errnum=true;}
+	if(!$errnum){
+		query("update sale_order_detail_tbl set Total=$total where DetailId='$tid';");
+	}
+	$OrderIds=base64_encode($order);
+	header("Location:member.orders.php?id=$OrderIds");	
+	return false;
+};
+
 function event_send_cart(){
 	$MemberId=str2int($_SESSION["MemberId"]);
 	if($MemberId>0)
@@ -56,7 +86,7 @@ function event_send_cart(){
 		event_add_order();
 	}else{
 		$backUrl="member.orders.php?action=send";
-		header("Location:m_member_create.php?action=login");	
+		header("Location:login.php");	
 	}
 	return false;
 };
@@ -256,13 +286,13 @@ foreach($Array_OrderId as $OrderId){
                 <span>库存:100,得力 De＆LiDL4197</span>
                 <h4>规格型号：xxxx</h4>
                 <div class="modified">
-                	<input type="button" class="input_btn" value="-" />
-                    <input type="text" class="input_text" readonly value="12" />
-                    <input type="button" class="input_btn" value="+" />
+                	<a href="?action=edit_cart&type=reduction&tid='.$row[0].'&total='.$row['Total'].'&order='.$OrderIds.'"><input type="button" class="input_btn" value="-"/></a>
+                    <input type="text" class="input_text num_'.$row[0].'" readonly value="'.$row['Total'].'" />
+                    <a href="?action=edit_cart&type=add&tid='.$row[0].'&total='.$row['Total'].'&order='.$OrderIds.'"><input type="button" class="input_btn" value="+" data-action="add" data-tid="'.$row[0].'"/></a>
                 </div>
             </div>
-            <em class="off">×</em>
-            <em class="price">&yen; 200.00</em>
+            <em class="off" data-tid="'.$row[0].'">×</em>
+            <em class="price">&yen; '.$sum_price.'</em>
         </li>';
 			}
 		}
