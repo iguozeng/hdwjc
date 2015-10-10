@@ -36,7 +36,7 @@ if($action=='nopay'){
         <li><a href="member.order.list.php"<?php echo $statu_selected_3;?>>ËùÓÐ¶©µ¥</a></li>
     </ul>
 </div>
-<div class="orders_list">
+<div class="orders_list_search">
 	<ul>
 	<?php
 $all_amount=0;		

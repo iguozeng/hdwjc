@@ -4,8 +4,6 @@
 
 /* 登录 注册 */
 body{ background:#EBEBEB;}
-.wrapper{ min-width:320px; max-width:480px; position:relative; margin:0 auto;}
-
 .a_reg{ padding-top:20px; background:#fff;}
 .a_link{ background:#F0EFEF; padding-top:35px; padding-bottom:100px;}
 .link_main{ height:60px; padding-left:3%;}
@@ -66,8 +64,8 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .orders_statu li a{display:block;border-bottom:#ddd solid 2px;text-align:center;height:40px;line-height:40px;font-size:16px;}
 .orders_statu li a.selected{border-bottom:#2B5DD2 solid 2px;}
 .array_title{ clear:both; padding:0 5% 0 5%; margin:0 auto; display:block; height:35px; line-height:35px; background:#FBFBFB; border-bottom:solid 1px #EBEBEB; }
-.orders_list{clear:both;min-height:400px; background:#EBEBEB; padding-bottom:110px;}
-.orders_list li{ background:#FFF; border-bottom:solid 1px #EBEBEB;}
+.orders_list_search{clear:both;min-height:400px; background:#EBEBEB; padding-bottom:110px;}
+.orders_list_search li{ background:#FFF; border-bottom:solid 1px #EBEBEB;}
 .array_title span{ width:70%; display:block; float:left;font-size:1.3em; color:#aaa;}
 .array_title a{ width:30%; display:block; float:right; text-align:right;font-size:1.3em; color:#aaa;}
 .array_column{ clear:both;padding:0 5% 0 5%;}
