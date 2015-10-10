@@ -6,6 +6,7 @@ $(function($){
 		case "news":$.include(["news.js"],1);break;
 		case "product.item":$.include(["product.item.js"],1);break;
 		case "cart":$.include(["cart.js"],1);break;
+		case "pay":$.include(["pay.js"],1);break;
 	}
 	
 	$(".person").click(function()
