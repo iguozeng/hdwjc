@@ -23,11 +23,13 @@
 				</ul>
 			</div>
 			<div class="hd">
-				<li><span>1/5</span></li>
-				<li><span>2/5</span></li>
-				<li><span>3/5</span></li>
-				<li><span>4/5</span></li>
-				<li><span>5/5</span></li>
+				<ul>
+					<li><span>1/5</span></li>
+					<li><span>2/5</span></li>
+					<li><span>3/5</span></li>
+					<li><span>4/5</span></li>
+					<li><span>5/5</span></li>
+				</ul>
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -38,6 +40,8 @@
 				autoPlay:false,
 			});
 		</script>
+<!--预览图轮播end-->
+<!--商品名称及基本信息-->
 		<div class="basic_box">
 			<h1><a href="">开口扳手/双头开口扳手开口扳手/双头开口扳手开口扳手/双头开口扳手开口扳手/双头开口扳手</a></h1>
 			<div class="basic">
@@ -52,6 +56,55 @@
 				</ul>
 			</div>
 		</div>
-<!--预览图轮播end-->
+<!--商品名称及基本信息end-->
+<!--规格型号选择-->
+		<div class="choose-version">
+			<ul>
+				<li><span>DL33305</span></li>
+				<li><span>DL3330533305</span></li>
+				<li class="selected"><span>DL305</span><b></b></li>
+				<li><span>DL33305</span></li>
+				<li><span>DL3330533305</span></li>
+				<li><span>DL305</span></li>
+				<li><span>DL33305</span></li>
+				<li><span>DL33305</span></li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+<!--规格型号选择end-->
+<!--商品信息及咨询评价-->
+		<div class="item_detail">
+			<ul class="item_detail_title">
+				<li class="selected"><span>商品信息</span></li>
+				<li><span>咨询评价</span></li>
+				<div class="clear"></div>
+			</ul>
+			<div class="item_detail_list">
+				<ul>
+					<li><span class="leftName">商品编码</span><span class="rightContent">GY00000006</span><div class="clear"></div></li>
+					<li><span class="leftName">商品编码</span><span class="rightContent">GY00000006</span><div class="clear"></div></li>
+					<li><span class="leftName">商品编码</span><span class="rightContent">GY00000006</span><div class="clear"></div></li>
+				</ul>
+			</div>
+			<div class="item_detail_content"></div>
+		</div>
+<!--商品信息及咨询评价end-->
+<!--六大优势-->
+		<div class="wrapper item_advantage_wrapper">
+			<img class="bg" src="images/item_advantage_bg.jpg" />
+			<div class="item_advantage txt_wrapper">
+				<span class="txtXXL">六大优势</span>
+				<span class="txtL">华东五金网是您购买五金机电建材的最佳选择</span>
+				<ul>
+					<li><img src="images/item_advantage_01.png" /></li>
+					<li><img src="images/item_advantage_02.png" /></li>
+					<li><img src="images/item_advantage_03.png" /></li>
+					<li><img src="images/item_advantage_04.png" /></li>
+					<li><img src="images/item_advantage_05.png" /></li>
+					<li><img src="images/item_advantage_06.png" /></li>
+				</ul>
+			</div>
+		</div>
+<!--六大优势end-->
 	</body>
 </html>
