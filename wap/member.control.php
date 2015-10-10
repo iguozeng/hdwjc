@@ -37,17 +37,18 @@ require_once YXS.'check.member.php';
     </div>
 </div>
 <div class="count_array">
-	<a href="">
+	<a href="member.order.list.php?action=nopay">
     	<img src="images/ico_07.png">
         <span>待结算</span>
     </a>
-    <a href="">
+    <a href="member.order.list.php?action=send">
     	<img src="images/ico_08.png">
-        <span>待结算</span>
+        <span>待收货</span>
     </a>
-    <a href="">
+    <a href="member.order.list.php">
     	<img src="images/ico_09.png">
-        <span>待结算</span>
+        <span>我的订单</span>
+    </a>
     </a>
 </div>
 <div class="partion"></div>
