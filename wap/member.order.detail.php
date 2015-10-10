@@ -178,6 +178,7 @@ $mod_amount=str2int($mod_amount,2);
     </dl>
 </div>
 </form>
+<?php require_once 'slides.php';?>
 <?php require_once 'p.footer.php';?>
 </div>
 </body>
