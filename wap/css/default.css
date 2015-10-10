@@ -233,6 +233,17 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .news_links_column{ clear:both; padding:10px 0 30px 0;}
 .news_links_column li{ display:block; width:88%; height:30px; line-height:30px; margin:0 auto; margin-bottom:5px; background:#E9EAEA; padding-left:5px; border-left:solid 3px #457CE6; overflow:hidden;}
 
+/* 搜索样式 */
+.head_show{ display:block; clear:both; height:60px; background:#EBECEC; padding-top:65px;}
+.search_box{width:90%; margin:0 auto;height: 40px;border: 1px solid #ddd;border-radius: 20px;background: #fff;position: relative; z-index:999;}
+.sort_select{ position:absolute; left:10px; top:0; width:80px; text-align:center; height:40px; line-height:40px;}
+.sort_select font{ display:block; text-align:center;width:80px;height: 40px;position: absolute;left:0;top: 40px;z-index:9999; background:#fff;}
+.search_sort{ display:block; border-bottom:solid 1px #eee; height:25px; line-height:25px;}
+.search_sort.top{ border-top:solid 1px #ddd;}
+.search_box input[type="text"]{ position:absolute; left:90px;top:1px; width:56%;height:35px; line-height:36px; border:0;}
+.search_box input[type="submit"]{ position:absolute; right:0; width:40px;height:40px; line-height:40px; display:block; background:#fff; border:0; z-index:99; background:url(../images/search_button.png) no-repeat center; background-size:35px 35px; border-left:solid 2px #ccc;}
+
+
 @media screen and (min-width:320px) {
 .array_title span{font-size:1.1em;}
 .array_title a{font-size:1.1em;}

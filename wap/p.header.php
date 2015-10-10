@@ -5,8 +5,9 @@
         <a href="javascript:history.go(-1)" class="pre"></a>
         <a href="javascript:location.reload();" class="refresh"></a>
         <span><?php echo $page_name; ?></span>
-        <a href="" class="search"></a>
+        <a href="javascript:void(0);" class="search"></a>
         <a href="javascript:void(0);" class="person"></a>
     </div>
 </div>
 </div>
+ 
