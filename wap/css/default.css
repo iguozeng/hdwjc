@@ -46,9 +46,7 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .cart_array li .off{ display:block;width:25px; height:25px; line-height:25px; text-align:center; color:#F00; border: solid 1px #eee; border-radius:50px;
  position:absolute; right:10px; top:10px; font-weight:bold; font-style:normal; font-size:16px;}
 .cart_array li .price{ display:block; width:120px; height:25px; line-height:25px; position:absolute; right:10px; bottom:15px; text-align:right; font-style:normal; font-size:1.2em; font-weight:bold; color:#F00;}
-.action_buy{ position: fixed; height:55px; width:100%; bottom:55px; background:#F5F5F5; min-width:320px; max-width:480px;}
-.buy_button{ display:block; float:left; background:url(../images/buy_button.png) no-repeat; width:110px; height:35px; background-size:110px 35px; color:#FFF; font-weight:bold; font-size:1.2em; line-height:35px; text-align:center; margin-top:10px; margin-left:5%; border:0;}
-.action_buy span{ display:block; float:right; text-align:left;width:40%;; height:55px; line-height:55px; color:#F00; font-size:1.2em; font-weight:bold;}
+
 
 /* 用户订单 */
 .address_array{ padding-top:45px; background:#fff;}

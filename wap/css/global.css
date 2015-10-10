@@ -109,3 +109,9 @@ font-size:1.5em; color:#FFF; text-align:center; left:0; right:0; margin:0 auto;}
 .ui_right a{ width:49%; height:55px; display:block; float:left;}
 .ui_right a img{ display:block; height:32px; width: auto; margin:0 auto; margin-top:3%;}
 .ui_right a span{ display:block; color:#FFF; height:23px; line-height:23px; font-weight:bold; text-align:center; font-size:1em;}
+/* ¹ºÂò°´Å¥ */
+.action_buy{ position: fixed; height:55px; width:100%; bottom:55px; background:#F5F5F5; min-width:320px; max-width:480px;}
+.action_buy.opened{display:block;margin-left:2px;}
+.action_buy.closeed{display:none;margin-left:0;}
+.buy_button{ display:block; float:left; background:url(../images/buy_button.png) no-repeat; width:110px; height:35px; background-size:110px 35px; color:#FFF; font-weight:bold; font-size:1.2em; line-height:35px; text-align:center; margin-top:10px; margin-left:5%; border:0;}
+.action_buy span{ display:block; float:right; text-align:left;width:40%;; height:55px; line-height:55px; color:#F00; font-size:1.2em; font-weight:bold;}

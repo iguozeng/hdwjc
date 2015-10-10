@@ -19,7 +19,8 @@ $(function($){
 			$(".ui_header").addClass("closed");
 			$(".ui_footer").removeClass("opened");
 			$(".ui_footer").addClass("closed");
-
+			$(".action_buy").removeClass("opened");
+			$(".action_buy").addClass("closed");
 		}else{
 			$(".warmp").removeClass("closed");
 			$(".warmp").addClass("opened");
@@ -29,6 +30,8 @@ $(function($){
 			$(".ui_header").addClass("opened");
 			$(".ui_footer").removeClass("closed");
 			$(".ui_footer").addClass("opened");
+			$(".action_buy").removeClass("closed");
+			$(".action_buy").addClass("opened");
 			$(window).resize(function(){
 				$(".slides,.slides dd").height($(window).height());
 			})
